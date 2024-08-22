@@ -3,19 +3,20 @@ import Image from "next/image";
 import React from "react";
 import { WobbleCard } from "./ui/wooble-card";
 import Form from "@/components/ui/form"
-import { SiGithub, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
+import { SiFacebook,SiGithub,SiX,SiLinkedin } from "react-icons/si";
 import { twMerge } from "tailwind-merge";
 import { motion, MotionProps } from "framer-motion";
 
 
 export default function WobbleCardF() {
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
+  
   return (
-    <main className="grid grid-cols-1 pb-2 lg:grid-cols-3 gap-4 md:max-w-[92vw] md:mx-[4vw] xl:max-w-[67vw] xl:mx-[16.5vw] w-full">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ease: "easeInOut", duration: 1}}
+       className="grid grid-cols-1 pb-2 lg:grid-cols-3 gap-4 md:max-w-[92vw] md:mx-[4vw] xl:max-w-[67vw] xl:mx-[16.5vw] w-full">
       
       <motion.div 
       initial="initial"
@@ -51,7 +52,7 @@ export default function WobbleCardF() {
       </WobbleCard>
 
       
-      <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-20/[0.3] min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+      <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-20/[0.3] min-h-[400px] lg:max-h-[401px] xl:min-h-[300px]">
         
         
         <div className="max-w-xm">
@@ -61,6 +62,13 @@ export default function WobbleCardF() {
           <p className="mt-4 max-w-[26rem] font-futurabk text-left  text-base/6 text-5">
           Connect with me to explore groundbreaking solutions that harness the power of decentralized technology and artificial intelligence.
           </p>
+          <Image
+          src="/k.jpg"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+        />
         </div>
         
         
@@ -70,12 +78,12 @@ export default function WobbleCardF() {
       whileHover={{scale: 1.03,}}
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
       
-      className="cols-span-1">
+      className="cols-span-1 max-h-[400px]">
           
           <Form/>
             </motion.div>
       
-      </main>
+      </motion.main>
   );
 }
 
@@ -126,10 +134,10 @@ const SocialsBlock = () => (
       className="cols-span-6 bg-20/[0.3]  md:col-span-3"
     >
       <a
-        href="#"
+        href="https://bd.linkedin.com/in/amramil"
         className="grid h-full place-content-center text-3xl text-darker/[0.9]"
       >
-        <SiYoutube />
+        <SiLinkedin />
       </a>
     </Block>
     <Block
@@ -140,7 +148,7 @@ const SocialsBlock = () => (
       className="col-span-6 bg-20/[0.3] md:col-span-3"
     >
       <a
-        href="#"
+        href="https://github.com/A-M-Ramil"
         className="grid h-full place-content-center text-3xl text-darker/[0.9]"
       >
         <SiGithub />
@@ -154,10 +162,10 @@ const SocialsBlock = () => (
       className="col-span-6 bg-20/[0.3] md:col-span-3"
     >
       <a
-        href="#"
+        href="https://www.facebook.com/ahammodmunim.ramil"
         className="grid h-full place-content-center text-3xl text-darker/[0.9]"
       >
-        <SiTiktok />
+        <SiFacebook />
       </a>
     </Block>
     <Block
@@ -168,10 +176,10 @@ const SocialsBlock = () => (
       className="col-span-6 bg-20/[0.3] md:col-span-3"
     >
       <a
-        href="#"
+        href="https://x.com/A_M_Ramil"
         className="grid h-full place-content-center text-3xl text-darker/[0.9]"
       >
-        <SiTwitter />
+        <SiX />
       </a>
     </Block>
   </>

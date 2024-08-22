@@ -5,18 +5,18 @@ import { cn } from "@/utils/cn";
 import { motion, MotionProps } from "framer-motion";
 
 export default function SignupForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     console.log("Form submitted");
   };
   return (
     
     
-    <div className=" w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-20/[0.3]">
+    <div className="h-full w-full mx-auto rounded-none md:rounded-2xl  p-4 md:p-8 shadow-input bg-20/[0.3]">
       
       
       
-        <LabelInputContainer className="mb-4">
+        <LabelInputContainer className=" mb-4 ">
             <Input id="Name" placeholder="Name" type="text" />
         </LabelInputContainer>
                 
@@ -39,6 +39,9 @@ export default function SignupForm() {
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
           whileHover={{ scale: 1.1 }}
+          onClick={
+            handleSubmit
+          }
         >
           Submit
           <BottomGradient />
