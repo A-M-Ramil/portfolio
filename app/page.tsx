@@ -2,6 +2,7 @@
 import Landing from "@/components/landing";
 
 import {HeroHighlight} from "@/components/ui/hero-highlight";
+import { CursorTrail } from "@/components/ui/cursorTrail";
 
 import Menu from "@/components/menu";
 import "./globals.css"
