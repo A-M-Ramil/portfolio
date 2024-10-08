@@ -15,7 +15,7 @@ export const CursorTrail: React.FC<CursorTrailProps> = ({ children }) => {
     const circlePositions = new Map<HTMLElement, { x: number; y: number }>();
 
     const colors = [
-        "#000000"
+        "#c5c69b"
       ];
       
 

@@ -6,8 +6,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Link from "next/link";
-import Testimonials from '@/components/testimonials';
-
+import Testimonials from "@/components/vertical_testamonials";
 
 export default function FeaturesSectionDemo() {
   const features = [
@@ -31,8 +30,7 @@ export default function FeaturesSectionDemo() {
       description:
         "Conducting thorough smart contract audits to prevent vulnerabilities and ensure reliability",
       skeleton: <SkeletonThree />,
-      className:
-        "col-span-1 lg:col-span-3 lg:border-r  border-darker/[0.2]",
+      className: "col-span-1 lg:col-span-3 lg:border-r  border-darker/[0.2]",
     },
     {
       title: "What Others Say About My Expertise",
@@ -46,11 +44,12 @@ export default function FeaturesSectionDemo() {
     <div className="relative z-20  pb-10 lg:py-10 max-w-7xl mx-auto">
       <div className="px-8 font-futural ">
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-bold text-darker">
-        Blockchain & Smart Contract Development
+          Blockchain & Smart Contract Development
         </h4>
 
         <p className="capitalize text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-5 text-center font-normal ">
-        helping businesses to leverage the power of blockchain technology to enhance transparency and security
+          helping businesses to leverage the power of blockchain technology to
+          enhance transparency and security
         </p>
       </div>
 
@@ -110,7 +109,6 @@ export const SkeletonOne = () => {
     <div className="relative flex py-8 px-2 gap-10 h-full">
       <div className="w-full  p-5  mx-auto bg-60 shadow-2xl group h-full">
         <div className="flex flex-1 w-full  flex-col space-y-2  ">
-          
           <Image
             src="/services_1.png"
             alt="header"
@@ -129,30 +127,22 @@ export const SkeletonOne = () => {
 
 export const SkeletonThree = () => {
   return (
-  
-      <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
-        <div className="flex flex-1 w-full  flex-col space-y-2  relative">
-         
-          
-          <Image
-            src="/services_3.png"
-            alt="header"
-            width={800}
-            height={800}
-            className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
-          />
-        </div>
+    <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
+      <div className="flex flex-1 w-full  flex-col space-y-2  relative">
+        <Image
+          src="/services_3.png"
+          alt="header"
+          width={800}
+          height={800}
+          className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+        />
       </div>
-    
+    </div>
   );
 };
 
 export const SkeletonTwo = () => {
-  const images = [
-    "/services_2_01.jpg",
-    "/k.jpg","/k.jpg",,
-
-  ];
+  const images = ["/services_2_01.jpg", "/k.jpg", "/k.jpg", ,];
 
   const imageVariants = {
     whileHover: {
@@ -168,7 +158,6 @@ export const SkeletonTwo = () => {
   };
   return (
     <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
-     
       <div className="flex flex-row -ml-20">
         {images.map((image, idx) => (
           <motion.div
@@ -222,12 +211,11 @@ export const SkeletonTwo = () => {
 
 export const SkeletonFour = () => {
   return (
-    <div className="h-[30vh]  flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10 pb-2 lg:mt-[15vh]">
+    <div className="h-[57vh]  ">
       <Testimonials />
     </div>
   );
 };
-
 
 const Skeleton = () => {
   return (

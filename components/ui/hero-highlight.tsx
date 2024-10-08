@@ -27,19 +27,18 @@ export const HeroHighlight = ({
     mouseY.set(clientY - top);
   }
   return (
-<div
-  className={cn(
-    "relative h-full flex items-center bg-third dark:bg-white justify-center w-full group",
-    containerClassName
-  )}
-  onMouseMove={handleMouseMove}
->
-  <div className="absolute inset-0 bg-dot-thick-third dark:bg-dot-thick-neutral-300 pointer-events-none" />
-  <div className="absolute inset-0 bg-gradient-to-r from-third to-transparent via-transparent opacity-90 pointer-events-none" />
-  <div className="absolute inset-0 bg-gradient-to-l from-third to-transparent via-transparent opacity-90 pointer-events-none" />
-  <div className="absolute inset-0 bg-gradient-to-t from-third to-transparent via-transparent opacity-90 pointer-events-none" />
-  <div className="absolute inset-0 bg-gradient-to-b from-third to-transparent via-transparent opacity-90 pointer-events-none" />
-
+    <div
+      className={cn(
+        "relative h-full flex items-center bg-third dark:bg-white justify-center w-full group",
+        containerClassName
+      )}
+      onMouseMove={handleMouseMove}
+    >
+      <div className="absolute inset-0 bg-dot-thick-third dark:bg-dot-thick-neutral-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-third to-transparent via-transparent opacity-90 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-l from-third to-transparent via-transparent opacity-90 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-third to-transparent via-transparent opacity-90 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-third to-transparent via-transparent opacity-90 pointer-events-none" />
 
       <motion.div
         className="pointer-events-none bg-dot-thick-forth dark:bg-dot-thick-indigo-500   absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
