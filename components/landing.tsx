@@ -11,11 +11,12 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams";
 export default function Landing() {
   const words = [
     "Blockchain",
-    "Frontend",
-    "UI/UX",
-    "SEO",
+    "Full Stack_Dev",
+    "UI/UX_Design",
+    "Seo_Specialist",
     "Game Dev",
-    "Friend",
+    "Friend_Mentor",
+    "WEB3_Dev",
   ];
 
   const refA = useRef<HTMLDivElement>(null);
@@ -48,9 +49,9 @@ export default function Landing() {
         <Separator orientation="horizontal" />
       </section>
 
-      <section className=" h-[33.33vh] overflow-hidden">
+      <section className=" h-[32.33vh] overflow-hidden">
         <div
-          className=" text-[31vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
+          className=" text-[29vw] leading-[5.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
         md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] lg:leading-[9rem] xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none  md:flex md:justify-center   font-extrabold mx-auto text-black "
         >
           <FlipWords words={words} />

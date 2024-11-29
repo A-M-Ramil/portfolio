@@ -15,7 +15,6 @@ export const FlipWords = ({
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
-
   const startAnimation = useCallback(() => {
     const word = words[words.indexOf(currentWord) + 1] || words[0];
     setCurrentWord(word);
@@ -60,7 +59,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "no-scrollbar overflow-hidden inline-block relative text-left text-black dark:text-neutral-900 px-2",
+          "no-scrollbar  inline-block relative text-left text-black dark:text-neutral-900 px-2",
           className
         )}
         key={currentWord}
