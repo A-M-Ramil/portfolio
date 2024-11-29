@@ -1,9 +1,9 @@
-"use client"
-import { useEffect, useRef, useState } from 'react';
-import {  useScroll } from 'framer-motion';
-import { Separator } from '@/components/ui/seperator';
-import Contact from '@/components/footer';
-import BubbleText from '@/components/ui/textBubble';
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { useScroll } from "framer-motion";
+import { Separator } from "@/components/ui/seperator";
+import Contact from "@/components/contact_all";
+import BubbleText from "@/components/ui/textBubble";
 
 const Home = () => {
   const refA = useRef<HTMLDivElement>(null);
@@ -21,46 +21,40 @@ const Home = () => {
       }
     });
   }, [scrollY]);
-  
+
   return (
     <div className="snap-y mx-2 snap-mandatory  no-scrollbar">
-      
-
       <section ref={refA} className="h-[29.33vh] snap-center ">
-      <div className='flex items-end md:justify-center  h-[29.33vh]'>
-        
-        <h1 className='text-[31vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
-        md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] lg:leading-[9rem] xl:tracking-[-0.9rem] 2xl:tracking-[-1.6rem] xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none  text-black'><BubbleText text="Munim Ramil"/></h1>
-      </div>
-      <Separator orientation='horizontal' />
+        <div className="flex items-end md:justify-center  h-[29.33vh]">
+          <h1
+            className="text-[29vw] leading-[5.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
+        md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] lg:leading-[9rem] xl:tracking-[-0.9rem] 2xl:tracking-[-1.6rem] xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none  text-black"
+          >
+            <BubbleText text="Munim Ramil" />
+          </h1>
+        </div>
+        <Separator orientation="horizontal" />
       </section>
 
       <section
         ref={refB}
-        className={`h-[24vh]   flex flex-col  ${sticky ? 'sticky ' : ''}`
-      } 
-      > <div className='text-[29vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
-      md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] overflow-hidden lg:leading-[9rem] md:justify-center  xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none flex items-end  text-black  h-[24vh] '>
-     <BubbleText text="Contact"/>
+        className={`h-[24vh]   flex flex-col  ${sticky ? "sticky " : ""}`}
+      >
+        {" "}
+        <div
+          className="text-[27vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
+      md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] overflow-hidden lg:leading-[9rem] md:justify-center  xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none flex items-end  text-black  h-[24vh] "
+        >
+          <BubbleText text="Contact" />
         </div>
-        <Separator orientation='horizontal' />
+        <Separator orientation="horizontal" />
       </section>
 
-    <section className='h-[77.00vh] pt-4 no-scrollbar scroll-smooth overflow-y-auto'>
-      
-      <Contact />
-
-
-
+      <section className="h-[77.00vh] pt-4 no-scrollbar scroll-smooth overflow-y-auto">
+        <Contact />
       </section>
-          
-        
     </div>
   );
 };
 
 export default Home;
-
-
-
-

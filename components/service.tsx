@@ -37,7 +37,7 @@ export default function FeaturesSectionDemo() {
       description:
         "Discover testimonials from clients, mentors, and peers who have experienced the impact of my blockchain and Web3 development work.",
       skeleton: <SkeletonFour />,
-      className: "col-span-1 lg:col-span-3 border-b pb-10 lg:border-none",
+      className: "col-span-1 lg:col-span-3  pb-10 lg:border-none",
     },
   ];
   return (

@@ -49,11 +49,7 @@ export const ModalTrigger = ({
   const { setOpen } = useModal();
   return (
     <motion.button
-     
-      className={cn(
-        "w-[64rem] ",
-        className
-      )}
+      className={cn("w-[64rem] ", className)}
       onClick={() => setOpen(true)}
     >
       {children}
@@ -104,7 +100,7 @@ export const ModalBody = ({
           <motion.div
             ref={modalRef}
             className={cn(
-              "min-h-[50%] max-h-[90%] md:max-w-[70%] xl:max-w-[45%] bg-1 dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              "min-h-[50%] max-w-[90%] max-h-[80%] md:max-w-[70%] xl:max-w-[45%] bg-1 dark:bg-neutral-950 border border-transparent dark:border-neutral-800 rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
               className
             )}
             initial={{
@@ -147,7 +143,12 @@ export const ModalContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col overflow-y-scroll no-scrollbar scroll-smooth flex-1 p-8 md:p-10", className)}>
+    <div
+      className={cn(
+        "flex flex-col overflow-y-scroll no-scrollbar scroll-smooth flex-1 p-8 md:p-10",
+        className
+      )}
+    >
       {children}
     </div>
   );
@@ -161,12 +162,7 @@ export const ModalFooter = ({
   className?: string;
 }) => {
   return (
-    <div
-      className={cn(
-        "flex justify-end p-4  bg-22",
-        className
-      )}
-    >
+    <div className={cn("flex justify-end p-4  bg-22", className)}>
       {children}
     </div>
   );

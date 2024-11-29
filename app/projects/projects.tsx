@@ -27,7 +27,7 @@ const Home = () => {
       <section ref={refA} className="h-[29.33vh] snap-center ">
         <div className="flex items-end md:justify-center h-[29.33vh]">
           <h1
-            className="text-[31vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
+            className="text-[29vw] leading-[5.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
         md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] xl:tracking-[-0.9rem] 2xl:tracking-[-1.6rem] lg:leading-[9rem]  xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none  text-black"
           >
             <BubbleText text="Munim Ramil" />
@@ -42,7 +42,7 @@ const Home = () => {
       >
         {" "}
         <div
-          className=" items-end text-[27.5vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
+          className=" text-[27.5vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
       md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] overflow-y-clip lg:leading-[9rem] md:justify-center  xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none flex items-end  text-black  h-[24vh] "
         >
           <BubbleText text="Projects" />

@@ -10,47 +10,33 @@ export default function SignupForm() {
     console.log("Form submitted");
   };
   return (
-    
-    
-    <div className="h-full w-full mx-auto rounded-none md:rounded-2xl  p-4 md:p-8 shadow-input bg-20/[0.3]">
-      
-      
-      
-        <LabelInputContainer className=" mb-4 ">
-            <Input id="Name" placeholder="Name" type="text" />
-        </LabelInputContainer>
-                
-        <LabelInputContainer className="mb-4">
-          
-          <Input id="email" placeholder="Email" type="email" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          
-          <Input id="subject" placeholder="Subject" type="text" />
-        </LabelInputContainer>
-        
-        <LabelInputContainer className="mb-4">
-          
-          <Input id="message" placeholder="Write in details" type="text" />
-        </LabelInputContainer>
-        <motion.button
-          className="bg-gradient-to-br relative group/btn from-60 to-60 block bg-60 w-full text-darker/[0.9] rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(10)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          whileHover={{ scale: 1.1 }}
-          onClick={
-            handleSubmit
-          }
-        >
-          Submit
-          <BottomGradient />
-        </motion.button>
+    <div className="h-full w-full mx-auto rounded-2xl border border-darker/[0.1] p-4 md:p-8 shadow-input bg-20/[0.3]">
+      <LabelInputContainer className=" mb-4 ">
+        <Input id="Name" placeholder="Name" type="text" />
+      </LabelInputContainer>
 
-        
-      
+      <LabelInputContainer className="mb-4">
+        <Input id="email" placeholder="Email" type="email" />
+      </LabelInputContainer>
+      <LabelInputContainer className="mb-4">
+        <Input id="subject" placeholder="Subject" type="text" />
+      </LabelInputContainer>
+
+      <LabelInputContainer className="mb-4">
+        <Input id="message" placeholder="Write in details" type="text" />
+      </LabelInputContainer>
+      <motion.button
+        className="bg-gradient-to-br relative group/btn from-60 to-60 block bg-60 w-full text-darker/[0.9] rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(10)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+        type="submit"
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        whileHover={{ scale: 1.1 }}
+        onClick={handleSubmit}
+      >
+        Submit
+        <BottomGradient />
+      </motion.button>
     </div>
-   
   );
 }
 
@@ -76,4 +62,3 @@ const LabelInputContainer = ({
     </div>
   );
 };
-

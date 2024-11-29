@@ -1,141 +1,116 @@
-"use client"
-import React, {useState,useRef, useEffect} from 'react'
-import Link from 'next/link'
+"use client";
+import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import "./menu.css";
 
 import { gsap } from "gsap";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import FlipLink from "@/components/ui/zoop";
 import FlipLinkOnly from "@/components/ui/zoop-only";
 
+const menuLinks = [
+  { path: "/", label: "Home" },
+  { path: "/about", label: "About" },
+  { path: "/projects", label: "Projects" },
+  { path: "/services", label: "Services" },
+  { path: "/contacts", label: "Contact" },
+  { path: "/experience", label: "Experience" },
+];
 
+export default function Menu() {
+  const container = useRef();
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = async () => {
+    setMenuOpen(!menuOpen);
+  };
 
-const menuLinks=[
-    {path:"/",label:"Home"},
-    {path:"/about",label:"About"},
-    {path:"/projects",label:"Projects"},
-    {path:"/services",label:"Services"},
-    {path:"/contacts",label:"Contact"},
-    {path:"/experience",label:"Experience"},
+  const tl = useRef();
 
-]
-
-
-
-
-
-export default  function Menu() {
-    const container= useRef();
-    const [menuOpen,setMenuOpen]=useState(false);
-
-    const toggleMenu=async()=>{
-        
-        setMenuOpen(!menuOpen);
-    };
-
-    const tl =useRef();
-
-    useGSAP(()=>{
-        gsap.set(".menu-link-item-holder",{y:75});
-        tl.current=gsap
-        .timeline({paused:true})
+  useGSAP(
+    () => {
+      gsap.set(".menu-link-item-holder", { y: 75 });
+      tl.current = gsap
+        .timeline({ paused: true })
         .to(".menu-overlay", {
-            duration: 1.75,
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-            ease: "power4.inOut",
-            })
-
+          duration: 1.75,
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+          ease: "power4.inOut",
+        })
 
         .to(".menu-link-item-holder", {
-            duration: 1.5,
-            y: 0,
-            stagger: 0.1,
-            ease: "power4.out",
-            delay: -0.75,
-            })
-            
-        },
-        {scope:container}
-    );
+          duration: 1.5,
+          y: 0,
+          stagger: 0.1,
+          ease: "power4.out",
+          delay: -0.75,
+        });
+    },
+    { scope: container }
+  );
 
-    useEffect(()=>{
-        if (menuOpen){
-            tl.current.play();
-        }else{
-            tl.current.reverse();
-        }
-    },[menuOpen]);
+  useEffect(() => {
+    if (menuOpen) {
+      tl.current.play();
+    } else {
+      tl.current.reverse();
+    }
+  }, [menuOpen]);
 
   return (
     <div className="menu-container z-auto " ref={container}>
-        <div className="menu-bar z-50">
-            <div className="menu-logo z-9 text-1xl text-black">
-                <FlipLink href={"/"}>
-                
-                Home
-                </FlipLink>
-            </div>
-            <div className="menu-open z-9  text-black" onClick={toggleMenu}>
-                <FlipLinkOnly>Menu</FlipLinkOnly>
-            </div>
+      <div className="menu-bar z-50">
+        <div className="menu-logo z-9 text-1xl text-black">
+          <FlipLink href={"/"}>Home</FlipLink>
         </div>
-        <div className="menu-overlay z-9">
-            <div className="menu-overlay-bar z-9">
-            <div className="menu-logo text-1xl text-black">
-                <FlipLink href={"/"}>
-                
-                Home
-                </FlipLink>
-            </div>
-            <div className="menu-logo text-1xl text-black" onClick={toggleMenu}>
-                <FlipLinkOnly >
-                Close
-                </FlipLinkOnly>
-            </div>
-            </div>
-            <div className="menu-close-icon text-black" onClick={toggleMenu}>
-
-                <p>&#x2715;</p>
-            </div>
-            <div className="menu-copy md:px-[2em] md:py-[2em] ">
-                <div className="menu-links">
-                    {menuLinks.map( (link,index)=>(
-                        <div className="menu-link-item" key={index}>
-                            <div className="menu-link-item-holder text-[14vw] sm:text-[10vw] md:text-[7vw] lg:text-[5vw]" onClick={ toggleMenu}>
-                        <FlipLink href={link.path}>{link.label}</FlipLink>
-                            </div>
-                            </div>
-                    ))}
-                </div>
-                <div className="menu-info ">
-                    <div className="menu-info-col h-full  ">
-                        <div className='w-fit flex flex-col gap-y-2 xl:text-[2vw] h-fit text-black'>
-                        
-                        <FlipLink href='#'>X &#8599;</FlipLink>
-                        <FlipLink href='#'>GitHub &#8599;</FlipLink>
-                        <FlipLink href='#'>Facebook&#8599;</FlipLink>
-                        <FlipLink href='#'>LinkedIn &#8599;</FlipLink>
-                        
-                        </div>
-                    </div>
-                    <div className="menu-info-col  ">
-                    <div className='w-fit flex flex-col gap-y-2  xl:text-[2vw] h-fit text-black'>
-                        <FlipLinkOnly>ramil@gam.com</FlipLinkOnly>
-                        <FlipLinkOnly>22 221 224</FlipLinkOnly>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div className="menu-preview text-black">
-                
-            </div>
-
-
-
+        <div className="menu-open z-9  text-black" onClick={toggleMenu}>
+          <FlipLinkOnly>Menu</FlipLinkOnly>
         </div>
-
+      </div>
+      <div className="menu-overlay z-9">
+        <div className="menu-overlay-bar z-9">
+          <div className="menu-logo text-1xl text-black">
+            <FlipLink href={"/"}>Home</FlipLink>
+          </div>
+          <div className="menu-logo text-1xl text-black" onClick={toggleMenu}>
+            <FlipLinkOnly>Close</FlipLinkOnly>
+          </div>
+        </div>
+        <div className="menu-close-icon text-black" onClick={toggleMenu}>
+          <p>&#x2715;</p>
+        </div>
+        <div className="menu-copy md:px-[2em] md:py-[2em] ">
+          <div className="menu-links">
+            {menuLinks.map((link, index) => (
+              <div className="menu-link-item" key={index}>
+                <div
+                  className="menu-link-item-holder text-[14vw] sm:text-[10vw] md:text-[7vw] lg:text-[5vw]"
+                  onClick={toggleMenu}
+                >
+                  <FlipLink href={link.path}>{link.label}</FlipLink>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="menu-info ">
+            <div className="menu-info-col h-full  ">
+              <div className="w-fit flex flex-col gap-y-2 xl:text-[2vw] h-fit text-black">
+                <FlipLink href="#">X &#8599;</FlipLink>
+                <FlipLink href="#">GitHub &#8599;</FlipLink>
+                <FlipLink href="#">Facebook&#8599;</FlipLink>
+                <FlipLink href="#">LinkedIn &#8599;</FlipLink>
+              </div>
+            </div>
+            <div className="menu-info-col  ">
+              <div className="w-fit flex flex-col gap-y-2  xl:text-[2vw] h-fit text-black">
+                <FlipLinkOnly>ramil@gam.com</FlipLinkOnly>
+                <FlipLinkOnly>22 221 224</FlipLinkOnly>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="menu-preview text-black"></div>
+      </div>
     </div>
-  )
+  );
 }
-

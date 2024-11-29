@@ -27,7 +27,7 @@ export default function Landing() {
         <BackgroundBeamsWithCollision>
           <div className="flex items-end md:justify-center h-[29.33vh]">
             <h1
-              className=" z-20 text-[31vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
+              className="  text-[29vw] leading-[5.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
         md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] lg:leading-[9rem] xl:tracking-[-0.9rem] 2xl:tracking-[-1.6rem]  xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none  text-black"
             >
               <BubbleText text="Munim Ramil" />
