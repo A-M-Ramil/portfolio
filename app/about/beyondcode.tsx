@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/modal";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { MaskContainer } from "@/components/ui/mask";
 
 export default function AnimatedModalDemo() {
   const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
@@ -27,7 +28,7 @@ export default function AnimatedModalDemo() {
             <h6 className="text-lg md:text-1xl  font-extrabold text-center mb-8">
               Hobbies & Passions - Life Outside Tech
             </h6>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center mb-4 items-center">
               {images.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -56,38 +57,45 @@ export default function AnimatedModalDemo() {
                 </motion.div>
               ))}
             </div>
-            <div className="py-10 text-justify leading-5 text-pretty text-sm flex flex-wrap gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[90%] mx-auto">
-              <p>
-                When I’m not deep in code, you’ll probably find me immersed in
-                one of my favorite offline AAA-rated games or battling it out in
-                an online FPS. Gaming has always been a big part of my life—it’s
-                my way of unwinding and keeping the competitive spirit
-                alive.Some of my favorite games include{" "}
-                <em>Sekiro: Shadows Die Twice</em>,<em>The Witcher 3</em>,{" "}
-                <em>Red Dead Redemption 2</em>,<em>Ghost of Tsushima</em>, or{" "}
-                <em>Far Cry 3</em>.
+            <MaskContainer
+              revealText={
+                <p className="py-10 text-justify  bg-1 text-black leading-5 text-pretty text-sm  gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[100%] mx-auto">
+                  When I’m not deep in code, you’ll probably find me immersed in
+                  one of my favorite offline AAA-rated games or battling it out
+                  in an online FPS. Gaming has always been a big part of my
+                  life—it’s my way of unwinding and keeping the competitive
+                  spirit alive.Some of my favorite games include{" "}
+                  <em>Sekiro: Shadows Die Twice</em>,<em>The Witcher 3</em>,{" "}
+                  <em>Red Dead Redemption 2</em>,<em>Ghost of Tsushima</em>, or{" "}
+                  <em>Far Cry 3</em>.
+                  <p className="mb-4" />
+                  But it’s not all about screen time for me. I’m also a huge fan
+                  of self-help and entrepreneurial books. Some of my favorites
+                  include <em>Show Your Work</em>, <em>Rework</em>,
+                  <em>The Almanack of Naval Ravikant</em>, <em>Ikigai</em>, and{" "}
+                  <em>Never Split the Difference</em>. I’m always on the lookout
+                  for new insights and ways to better understand life and
+                  business. Recently, I’ve added weightlifting to my routine,
+                  and the gym has become a new passion of mine—it’s amazing how
+                  pushing physical limits can clear the mind.
+                  <p className="mb-4" />
+                  I’ve also got a soft spot for cats. Though I don’t have one at
+                  the moment, I really hope to adopt a feline friend someday.
+                  And when I’m not gaming or at the gym, I’m probably trying to
+                  sharpen my chess skills or diving into a new anime. Speaking
+                  of which, I’ve seen so many anime, manga, manhwa, and manhua
+                  that I’ve honestly lost count. If you ever need a
+                  recommendation, I’m your go-to person.
+                </p>
+              }
+              size={30}
+              revealSize={500}
+            >
+              <p className="text-1">
+                All hail to PC Gamers! <br />
+                (also, cat lovers)
               </p>
-              <p className="mt-4">
-                But it’s not all about screen time for me. I’m also a huge fan
-                of self-help and entrepreneurial books. Some of my favorites
-                include <em>Show Your Work</em>, <em>Rework</em>,
-                <em>The Almanack of Naval Ravikant</em>, <em>Ikigai</em>, and{" "}
-                <em>Never Split the Difference</em>. I’m always on the lookout
-                for new insights and ways to better understand life and
-                business. Recently, I’ve added weightlifting to my routine, and
-                the gym has become a new passion of mine—it’s amazing how
-                pushing physical limits can clear the mind.
-              </p>
-              <p className="mt-4">
-                I’ve also got a soft spot for cats. Though I don’t have one at
-                the moment, I really hope to adopt a feline friend someday. And
-                when I’m not gaming or at the gym, I’m probably trying to
-                sharpen my chess skills or diving into a new anime. Speaking of
-                which, I’ve seen so many anime, manga, manhwa, and manhua that
-                I’ve honestly lost count. If you ever need a recommendation, I’m
-                your go-to person.
-              </p>
-            </div>
+            </MaskContainer>
           </ModalContent>
           <ModalFooter className="gap-4">
             <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
