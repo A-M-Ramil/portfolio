@@ -12,16 +12,14 @@ export default function about() {
       className=" bg-third 
    "
     >
-      <CursorTrail>
-        <HeroHighlight>
-          <div className="h-[4vh]">
-            <Nav />
-          </div>
-          <div className=" w-[100vw]">
-            <About />
-          </div>
-        </HeroHighlight>
-      </CursorTrail>
+      <HeroHighlight>
+        <div className="h-[4vh]">
+          <Nav />
+        </div>
+        <div className=" w-[100vw]">
+          <About />
+        </div>
+      </HeroHighlight>
     </main>
   );
 }

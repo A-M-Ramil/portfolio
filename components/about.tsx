@@ -5,21 +5,18 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Who from '@/app/about/whoamI';
-import MyJourney from '@/app/about/myjourney';
-import BeyondCode from '@/app/about/beyondcode';
-import LookingAhead from '@/app/about/lookingahead';
-
-
+import Who from "@/app/about/whoamI";
+import MyJourney from "@/app/about/myjourney";
+import BeyondCode from "@/app/about/beyondcode";
+import LookingAhead from "@/app/about/lookingahead";
 
 import { FaFileCode } from "react-icons/fa";
 import { GiLifeBar } from "react-icons/gi";
-import { RiProfileFill,RiFolderHistoryFill  } from "react-icons/ri";
+import { RiProfileFill, RiFolderHistoryFill } from "react-icons/ri";
 import { link } from "fs";
 
 export default function Bento() {
   return (
-    
     <BentoGrid className="font-futurabk z-5 pt-4 px-5 w-screen max-w-[95vw] md:max-w-[90vw] xl:max-w-[70vw] pb-[5vh] mx-auto md:auto-rows-[20rem]">
       {items.map((item, i) => (
         <BentoGridItem
@@ -28,27 +25,16 @@ export default function Bento() {
           description={item.description}
           header={item.header}
           className={item.className}
-          
           link={item.link}
         />
       ))}
     </BentoGrid>
-    
   );
 }
-
-
-
-
-
-
-
-
 
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl    bg-dot-white/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-white/[0.2]  "></div>
 );
-
 
 const SkeletonTwo = () => {
   const variants = {
@@ -83,14 +69,12 @@ const SkeletonTwo = () => {
           style={{
             maxWidth: Math.random() * (100 - 40) + 40 + "%",
           }}
-          className="flex flex-row rounded-full border border-5/[0.09] p-2  items-center space-x-2 bg-60 w-full h-4"
+          className="flex flex-row rounded-full border border-20 p-2  items-center space-x-2 bg-20 w-full h-4"
         ></motion.div>
       ))}
     </motion.div>
   );
 };
-
-
 
 const SkeletonOne = () => {
   return (
@@ -102,28 +86,10 @@ const SkeletonOne = () => {
         )}
       >
         <div className="absolute w-full h-full min-h-[6rem] top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
-        
-        
       </div>
     </div>
   );
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
 
 const SkeletonThree = () => {
   const variants = {
@@ -146,8 +112,7 @@ const SkeletonThree = () => {
       }}
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
       style={{
-        background:
-          `linear-gradient(-45deg, #FEFFD2,
+        background: `linear-gradient(-45deg, #FEFFD2,
         #cee1b1,
         #9dc496,
         #6aa780)`,
@@ -158,8 +123,6 @@ const SkeletonThree = () => {
     </motion.div>
   );
 };
-
-
 
 const SkeletonFour = () => {
   const first = {
@@ -216,7 +179,7 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-5 mt-4">
-          Nooooooo....An Entrepreneur 
+          Nooooooo....An Entrepreneur
         </p>
         <p className="border border-green-500 font-semibold bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Sensible
@@ -244,11 +207,6 @@ const SkeletonFour = () => {
   );
 };
 
-
-
-
-
-
 const items = [
   {
     title: "Who I Am",
@@ -265,7 +223,6 @@ const items = [
     className: "md:col-span-1 ",
     icon: <RiFolderHistoryFill className="h-4 w-4 text-darker" />,
     link: <MyJourney />,
-
   },
   {
     title: "Beyond Code",
@@ -274,26 +231,13 @@ const items = [
     className: "md:col-span-1 ",
     icon: <FaFileCode className="h-4 w-4 text-darker" />,
     link: <BeyondCode />,
-
   },
   {
     title: "Looking Ahead",
-    description:
-      "My Aspirations - Vision & Future Goals",
+    description: "My Aspirations - Vision & Future Goals",
     header: <SkeletonFour />,
     className: "md:col-span-2 ",
     icon: <GiLifeBar className="h-4 w-4 text-darker" />,
     link: <LookingAhead />,
-
   },
 ];
-
-
-
-
-
-
-
-
-
-

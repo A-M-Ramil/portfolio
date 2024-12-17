@@ -50,12 +50,7 @@ export const BentoGridItem = ({
         <div className="grid grid-cols-2   font-normal text-sixth text-xs dark:text-neutral-600">
           <div className="justify-self-start">{description}</div>
           <div className="justify-self-end ">{link}</div>
-          
-         
-          
         </div>
-        
-        
       </div>
     </div>
   );
