@@ -73,7 +73,7 @@ export default function AnimatedModalDemo() {
               revealSize={500}
             >
               <p className="text-1">
-                Made a lot of mistakes, which made me "ME"{" "}
+                Made a lot of mistakes, which made me &quot;ME&rdquo;
               </p>
             </MaskContainer>
           </ModalContent>
