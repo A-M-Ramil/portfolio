@@ -42,11 +42,12 @@ export default function WobbleCardF() {
           </p>
         </div>
         <Image
-          src="/k.jpg"
+          src="/contact/contact1.gif"
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          unoptimized
+          className="absolute -right-4 lg:-right-[40%] filter -bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
 
@@ -61,11 +62,12 @@ export default function WobbleCardF() {
           </p>
         </div>
         <Image
-          src="/k.jpg"
+          src="/contact/contact2.gif"
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          unoptimized
+          className="absolute -right-4 lg:-right-[40%]  filter -bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
       <motion.div

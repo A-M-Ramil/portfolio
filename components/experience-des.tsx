@@ -1,110 +1,73 @@
-"use client"
+"use client";
 import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import {
-  Modal,
-  ModalTrigger,
-} from "@/components/ui/modalexp";
+import { Modal, ModalTrigger } from "@/components/ui/modalexp";
 
-import { Education,
+import {
+  Education,
   Blockchain,
   Seo,
   Webdev,
-  Workexp
-
+  Workexp,
 } from "@/app/experience/skeletons";
 
-
 export const HoverImageExperiences = () => {
-  
   return (
     <section className="  p-4 md:p-8">
       <div className="mx-auto max-w-5xl">
-      <Modal>
-      <ModalTrigger>
-        <Experience
-          heading="Education"
-          subheading="How I became Me"
-          imgSrc="/imgs/random/11.jpg"
-          
-        />
-        </ModalTrigger>
-        <Education/>
+        <Modal>
+          <ModalTrigger>
+            <Experience
+              heading="BlockChain"
+              subheading="Why it is passion"
+              imgSrc="/imgs/random/6.jpg"
+            />
+          </ModalTrigger>
+          <Blockchain />
         </Modal>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <Modal>
-        <ModalTrigger>
-        <Experience
-          heading="BlockChain"
-          subheading="Why it is passion"
-          imgSrc="/imgs/random/6.jpg"
-          
-        />
-         </ModalTrigger>
-        <Blockchain/>
-       
+          <ModalTrigger>
+            <Experience
+              heading="SEO"
+              subheading="How Corona affected"
+              imgSrc="/imgs/random/4.jpg"
+            />
+          </ModalTrigger>
+          <Seo />
         </Modal>
 
-
         <Modal>
-        <ModalTrigger>
-        <Experience
-          heading="SEO"
-          subheading="How Corona affected"
-          imgSrc="/imgs/random/4.jpg"
-         
-        />
-        </ModalTrigger>
-        <Seo/>
-        
-        </Modal>
-
-
-        <Modal>
-        <ModalTrigger>
-        <Experience
-          heading="Web Development"
-          subheading="Full Journey to Web Development"
-          imgSrc="/imgs/random/5.jpg"
-          
-        />
-         </ModalTrigger>
-        <Webdev/>
-       
-
-
+          <ModalTrigger>
+            <Experience
+              heading="Web Development"
+              subheading="Full Journey to Web Development"
+              imgSrc="/imgs/random/5.jpg"
+            />
+          </ModalTrigger>
+          <Webdev />
         </Modal>
         <Modal>
-        <ModalTrigger>
-        <Experience
-          heading="Work Experience"
-          subheading="Previous Work Experience"
-          imgSrc="/imgs/random/10.jpg"
-          
-        />
-        </ModalTrigger>
-        <Workexp/>
-       
+          <ModalTrigger>
+            <Experience
+              heading="Work Experience"
+              subheading="Previous Work Experience"
+              imgSrc="/imgs/random/10.jpg"
+            />
+          </ModalTrigger>
+          <Workexp />
+        </Modal>
+
+        <Modal>
+          <ModalTrigger>
+            <Experience
+              heading="Education"
+              subheading="How I became Me"
+              imgSrc="/imgs/random/11.jpg"
+            />
+          </ModalTrigger>
+          <Education />
         </Modal>
       </div>
     </section>
@@ -115,7 +78,6 @@ interface ExperienceProps {
   heading: string;
   imgSrc: string;
   subheading: string;
-  
 }
 
 const Experience = ({ heading, imgSrc, subheading }: ExperienceProps) => {
@@ -150,7 +112,6 @@ const Experience = ({ heading, imgSrc, subheading }: ExperienceProps) => {
 
   return (
     <motion.a
-      
       ref={ref}
       onMouseMove={handleMouseMove}
       initial="initial"
@@ -184,9 +145,7 @@ const Experience = ({ heading, imgSrc, subheading }: ExperienceProps) => {
             </motion.span>
           ))}
         </motion.span>
-        <span className="  mt-2 block text-base text-5 transition-colors duration-500 group-hover:text-black">
-          
-        </span>
+        <span className="  mt-2 block text-base text-5 transition-colors duration-500 group-hover:text-black"></span>
       </div>
 
       <motion.img
@@ -227,50 +186,3 @@ const Experience = ({ heading, imgSrc, subheading }: ExperienceProps) => {
 };
 
 export default HoverImageExperiences;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

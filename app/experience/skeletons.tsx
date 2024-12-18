@@ -60,22 +60,14 @@ export const Education = () => {
 
           <p>
             Before university, I completed my HSC at <b>Notre Dame College</b>,
-            one of the most esteemed institutions in Bangladesh, and my SSC at{" "}
-            <b>Ikkshu Gabeshawana High School</b>, <b>Ishwardi</b>. I was
-            fortunate to achieve a GPA of 5.00 out of 5.00 in both exams,
-            without relying on any additional subjects. My educational journey
-            began at <b>Pre-Cadet School</b> in <b>Rajshahi</b>, where I
-            completed my nursery level, and continued through{" "}
-            <b>Moonlit High School</b> and <b>Sabuj Kuri Kindergarten</b> in{" "}
-            <b>Ishwardi</b>. These schools hold a special place in my heart, and
-            I cherish the memories from those early days.
+            one of the most esteemed institutions in Bangladesh.
           </p>
 
           <p>
-            Learning has always been a passion of mine, and I’m grateful for the
-            experiences and knowledge I’ve gained along the way. I’m eager to
-            continue this journey, exploring new challenges and opportunities in
-            the world of tech and development.
+            Throughout my academic journey, I’ve consistently ranked in the top
+            1% of my department, a testament to my dedication and hard work. I’m
+            passionate about learning and growing, and I’m always seeking new
+            opportunities to expand my knowledge and skills.
           </p>
         </div>
       </ModalContent>
