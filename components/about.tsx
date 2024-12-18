@@ -157,7 +157,7 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl  p-4 bg-60 border-black/[0.1] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="/k.jpg"
+          src="/about/me2.jpg"
           alt="avatar"
           height="100"
           width="100"
@@ -172,7 +172,7 @@ const SkeletonFour = () => {
       </motion.div>
       <motion.div className="h-full relative  z-1 w-1/3 rounded-2xl  p-4 bg-60 border-black/[0.1] border flex flex-col items-center justify-center">
         <Image
-          src="/k.jpg"
+          src="/about/me2.jpg"
           alt="avatar"
           height="100"
           width="100"
@@ -190,7 +190,7 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl -z-2 p-4 bg-60 border-black/[0.1] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="/k.jpg"
+          src="/about/me2.jpg"
           alt="avatar"
           height="100"
           width="100"

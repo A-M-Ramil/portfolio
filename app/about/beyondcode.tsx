@@ -12,7 +12,12 @@ import { motion } from "framer-motion";
 import { MaskContainer } from "@/components/ui/mask";
 
 export default function AnimatedModalDemo() {
-  const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
+  const images = [
+    "/about/nar.gif",
+    "/about/read.gif",
+    "/about/fracry3.gif",
+    "/about/gym.gif",
+  ];
   return (
     <div className=" text-darker ">
       <Modal>
@@ -52,6 +57,7 @@ export default function AnimatedModalDemo() {
                     alt="bali images"
                     width="500"
                     height="500"
+                    unoptimized
                     className="rounded-lg h-28 w-28 md:h-40 md:w-40 object-cover flex-shrink-0"
                   />
                 </motion.div>
@@ -98,9 +104,12 @@ export default function AnimatedModalDemo() {
             </MaskContainer>
           </ModalContent>
           <ModalFooter className="gap-4">
-            <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+            <a
+              href="/contacts"
+              className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-black w-28"
+            >
               Contact Me
-            </button>
+            </a>
           </ModalFooter>
         </ModalBody>
       </Modal>

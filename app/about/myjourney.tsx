@@ -30,10 +30,11 @@ export default function AnimatedModalDemo() {
             </h6>
             <div className="flex justify-center ">
               <Image
-                src={"/whoamI.jpg"}
+                src={"/about/MUnim.gif"}
                 alt="bali images"
                 width="900"
                 height="1200"
+                unoptimized
                 className="rounded-lg h-fit w-[100%] object-cover flex-shrink-0"
               />
             </div>
@@ -78,9 +79,12 @@ export default function AnimatedModalDemo() {
             </MaskContainer>
           </ModalContent>
           <ModalFooter className="gap-4">
-            <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+            <a
+              href="/contacts"
+              className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-black w-28"
+            >
               Contact Me
-            </button>
+            </a>
           </ModalFooter>
         </ModalBody>
       </Modal>
