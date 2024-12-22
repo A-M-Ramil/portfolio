@@ -95,16 +95,29 @@ export default function Menu() {
           <div className="menu-info ">
             <div className="menu-info-col h-full  ">
               <div className="w-fit flex flex-col gap-y-2 xl:text-[2vw] h-fit text-black">
-                <FlipLink href="#">X &#8599;</FlipLink>
-                <FlipLink href="#">GitHub &#8599;</FlipLink>
-                <FlipLink href="#">Facebook&#8599;</FlipLink>
-                <FlipLink href="#">LinkedIn &#8599;</FlipLink>
+                <FlipLink href="https://x.com/A_M_Ramil">X &#8599;</FlipLink>
+                <FlipLink href="https://github.com/A-M-Ramil">
+                  GitHub &#8599;
+                </FlipLink>
+                <FlipLink href="https://www.facebook.com/ahammodmunim.ramil">
+                  Facebook&#8599;
+                </FlipLink>
+                <FlipLink href="https://bd.linkedin.com/in/amramil">
+                  LinkedIn &#8599;
+                </FlipLink>
+                <FlipLink
+                  href="/AhammodMunimRamil_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume &#8599;
+                </FlipLink>
               </div>
             </div>
             <div className="menu-info-col  ">
               <div className="w-fit flex flex-col gap-y-2  xl:text-[2vw] h-fit text-black">
-                <FlipLinkOnly>ramil@gam.com</FlipLinkOnly>
-                <FlipLinkOnly>22 221 224</FlipLinkOnly>
+                <FlipLinkOnly>amramil.amr@gmail.com</FlipLinkOnly>
+                <FlipLinkOnly>+880 1755 219197</FlipLinkOnly>
               </div>
             </div>
           </div>
