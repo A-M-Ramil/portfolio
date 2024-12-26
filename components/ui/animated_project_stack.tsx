@@ -77,7 +77,7 @@ export const AnimatedTooltip = ({
 
           <div
             onMouseMove={handleMouseMove}
-            className="h-14 w-14 object-cover flex items-center justify-center group-hover:scale-105 group-hover:z-100  rounded-full bg-gray-800 relative transition duration-500"
+            className="h-14 w-14 object-cover flex items-center justify-center group-hover:scale-105 group-hover:z-100  rounded-full bg-darker relative transition duration-500"
           >
             <item.Icon size={40} color="white" />
           </div>

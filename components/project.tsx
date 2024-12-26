@@ -23,27 +23,27 @@ export default function CardItem() {
 
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "CrowdEther",
+    description: "Decentralized crowdfunding platform.",
     pic: "/k.jpg",
-    itemlink: "/",
+    itemlink: "/projects/1",
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "ChainProof",
+    description: "Decentralized Identity Ledger",
     pic: "/k.jpg",
-    itemlink: "/",
+    itemlink: "/projects/2",
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "Cryptix",
+    description: "Decentralized E-tickeing platform.",
     pic: "/k.jpg",
-    itemlink: "/",
+    itemlink: "/projects/3",
   },
   {
-    title: "The Power of Communication",
-    description: "Understand the impact of effective lives.",
+    title: "SendAi",
+    description: "Decentralized crypto exchange platform.",
     pic: "/k.jpg",
-    itemlink: "/",
+    itemlink: "/projects/4",
   },
 ];

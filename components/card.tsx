@@ -36,14 +36,14 @@ export const CardItemz = ({
       <CardBody className="bg-20/[0.3] relative group/card  h-fit dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-[90vw] min-[500px]:w-[70vw]  gap-x-2  sm:w-fit     rounded-xl p-6   ">
         <CardItem
           translateZ="50"
-          className="text-xl h-[4vh] leading-[1rem] font-bold text-sixth dark:text-white"
+          className="text-2xl h-[2vh] leading-[1rem] font-bold text-darker dark:text-white"
         >
           {title}
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
-          className="text-sixth h-[4vh] text-sm max-w-sm mt-2 dark:text-neutral-300"
+          className="text-darker h-[3vh] text-sm  max-w-sm mt-2 dark:text-neutral-300"
         >
           {description}
         </CardItem>
