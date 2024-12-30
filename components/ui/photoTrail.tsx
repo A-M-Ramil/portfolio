@@ -1,7 +1,7 @@
 "use client";
 import { useAnimate } from "framer-motion";
 import React, { MouseEventHandler, ReactNode, useRef } from "react";
-import { FiMousePointer } from "react-icons/fi";
+
 import { GiBackForth } from "react-icons/gi";
 
 export const Trail = () => {
