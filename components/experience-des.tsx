@@ -21,7 +21,7 @@ export const HoverImageExperiences = () => {
             <Experience
               heading="BlockChain"
               subheading="Why it is passion"
-              imgSrc="/imgs/random/6.jpg"
+              imgSrc="/experience/9.png"
             />
           </ModalTrigger>
           <Blockchain />
@@ -32,7 +32,7 @@ export const HoverImageExperiences = () => {
             <Experience
               heading="SEO"
               subheading="How Corona affected"
-              imgSrc="/imgs/random/4.jpg"
+              imgSrc="/experience/10.png"
             />
           </ModalTrigger>
           <Seo />
@@ -43,7 +43,7 @@ export const HoverImageExperiences = () => {
             <Experience
               heading="Web Development"
               subheading="Full Journey to Web Development"
-              imgSrc="/imgs/random/5.jpg"
+              imgSrc="/experience/11.png"
             />
           </ModalTrigger>
           <Webdev />
@@ -53,7 +53,7 @@ export const HoverImageExperiences = () => {
             <Experience
               heading="Work Experience"
               subheading="Previous Work Experience"
-              imgSrc="/imgs/random/10.jpg"
+              imgSrc="/experience/12.png"
             />
           </ModalTrigger>
           <Workexp />
@@ -64,7 +64,7 @@ export const HoverImageExperiences = () => {
             <Experience
               heading="Education"
               subheading="How I became Me"
-              imgSrc="/imgs/random/11.jpg"
+              imgSrc="/experience/13.png"
             />
           </ModalTrigger>
           <Education />

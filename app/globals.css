@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 .circle {
-    pointer-events: none;
-    z-index: 99999999;
-  }
+  pointer-events: none;
+  z-index: 99999999;
+}
+
+::selection {
+  background-color: black; /* Background color when text is selected */
+  color: white; /* Text color when text is selected */
+}

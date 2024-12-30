@@ -1,52 +1,24 @@
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalTrigger,
-} from "@/components/ui/modalexp";
+import { ModalBody, ModalContent, ModalFooter } from "@/components/ui/modalexp";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export const Education = () => {
-  const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
   return (
     <ModalBody>
       <ModalContent>
-        <h4 className="text-lg md:text-2xl tracking-widest font-extrabold text-center mb-1">
+        <h4 className="text-lg md:text-2xl  font-extrabold text-center mb-8">
           Educational Background
         </h4>
-        <h6 className="text-xs md:text-1xl  font-semibold text-center mb-8">
+        <h6 className="text-lg md:text-1xl  font-extrabold text-center mb-8">
           My Developer Journey
         </h6>
-        <div className="flex justify-center items-center">
-          {images.map((image, idx) => (
-            <motion.div
-              key={"images" + idx}
-              style={{
-                rotate: Math.random() * 20 - 10,
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              whileTap={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-            >
-              <Image
-                src={image}
-                alt="bali images"
-                width="500"
-                height="500"
-                className="rounded-lg h-28 w-28 md:h-40 md:w-40 object-cover flex-shrink-0"
-              />
-            </motion.div>
-          ))}
+        <div className="flex justify-center ">
+          <Image
+            src={"/experience/13.png"}
+            alt="Educational Background"
+            width="900"
+            height="1200"
+            className="rounded-lg h-fit w-[90%] object-cover flex-shrink-0"
+          />
         </div>
         <div className="py-10 text-justify leading-5 text-pretty text-sm flex flex-wrap gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[90%] mx-auto">
           <p>
@@ -72,53 +44,35 @@ export const Education = () => {
         </div>
       </ModalContent>
       <ModalFooter className="gap-4">
-        <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+        <a
+          href="/contacts"
+          className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-black w-28"
+        >
           Contact Me
-        </button>
+        </a>
       </ModalFooter>
     </ModalBody>
   );
 };
 
 export const Blockchain = () => {
-  const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
   return (
     <ModalBody>
       <ModalContent>
-        <h4 className="text-lg md:text-2xl tracking-widest font-extrabold text-center mb-2">
+        <h4 className="text-lg md:text-2xl  font-extrabold text-center mb-8">
           A Journey of Blocks
         </h4>
-        <h6 className="text-xs md:text-1xl  font-semibold text-center mb-8">
+        <h6 className="text-lg md:text-1xl  font-extrabold text-center mb-8">
           How I ended up here-Blockchain
         </h6>
-        <div className="flex justify-center items-center">
-          {images.map((image, idx) => (
-            <motion.div
-              key={"images" + idx}
-              style={{
-                rotate: Math.random() * 20 - 10,
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              whileTap={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-            >
-              <Image
-                src={image}
-                alt="bali images"
-                width="500"
-                height="500"
-                className="rounded-lg h-28 w-28 md:h-40 md:w-40 object-cover flex-shrink-0"
-              />
-            </motion.div>
-          ))}
+        <div className="flex justify-center ">
+          <Image
+            src={"/experience/9.png"}
+            alt="Blockchain"
+            width="900"
+            height="1200"
+            className="rounded-lg h-fit w-[90%] object-cover flex-shrink-0"
+          />
         </div>
         <div className="py-10 text-justify leading-5 text-pretty text-sm flex flex-wrap gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[90%] mx-auto">
           <p>
@@ -160,51 +114,33 @@ export const Blockchain = () => {
         </div>
       </ModalContent>
       <ModalFooter className="gap-4">
-        <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+        <a
+          href="/contacts"
+          className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-black w-28"
+        >
           Contact Me
-        </button>
+        </a>
       </ModalFooter>
     </ModalBody>
   );
 };
 
 export const Seo = () => {
-  const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
   return (
     <ModalBody>
       <ModalContent>
-        <h4 className="text-lg md:text-2xl tracking-widest font-extrabold text-center mb-2">
+        <h4 className="text-lg md:text-2xl  font-extrabold text-center mb-8">
           Mastering SEO: A Journey of Strategic Growth
         </h4>
 
-        <div className="flex justify-center items-center">
-          {images.map((image, idx) => (
-            <motion.div
-              key={"images" + idx}
-              style={{
-                rotate: Math.random() * 20 - 10,
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              whileTap={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-            >
-              <Image
-                src={image}
-                alt="bali images"
-                width="500"
-                height="500"
-                className="rounded-lg h-28 w-28 md:h-40 md:w-40 object-cover flex-shrink-0"
-              />
-            </motion.div>
-          ))}
+        <div className="flex justify-center ">
+          <Image
+            src={"/experience/10.png"}
+            alt="SEO"
+            width="900"
+            height="1200"
+            className="rounded-lg h-fit w-[90%] object-cover flex-shrink-0"
+          />
         </div>
         <div className="py-10 text-justify leading-5 text-pretty text-sm flex flex-wrap gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[90%] mx-auto">
           <p>
@@ -228,53 +164,35 @@ export const Seo = () => {
         </div>
       </ModalContent>
       <ModalFooter className="gap-4">
-        <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+        <a
+          href="/contacts"
+          className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-black w-28"
+        >
           Contact Me
-        </button>
+        </a>
       </ModalFooter>
     </ModalBody>
   );
 };
 
 export const Webdev = () => {
-  const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
   return (
     <ModalBody>
       <ModalContent>
-        <h4 className="text-lg md:text-2xl  font-extrabold tracking-widest text-center mb-2">
+        <h4 className="text-lg md:text-2xl  font-extrabold text-center mb-8">
           Building the Web: My Development Journey
         </h4>
-        <h6 className="text-xs md:text-1xl  font-semibold text-center mb-8">
+        <h6 className="text-lg md:text-1xl  font-extrabold text-center mb-8">
           From Smart Contracts to Full-Stack Expertise
         </h6>
-        <div className="flex justify-center items-center">
-          {images.map((image, idx) => (
-            <motion.div
-              key={"images" + idx}
-              style={{
-                rotate: Math.random() * 20 - 10,
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              whileTap={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-            >
-              <Image
-                src={image}
-                alt="bali images"
-                width="500"
-                height="500"
-                className="rounded-lg h-28 w-28 md:h-40 md:w-40 object-cover flex-shrink-0"
-              />
-            </motion.div>
-          ))}
+        <div className="flex justify-center ">
+          <Image
+            src={"/experience/11.png"}
+            alt="Web Development"
+            width="900"
+            height="1200"
+            className="rounded-lg h-fit w-[90%] object-cover flex-shrink-0"
+          />
         </div>
         <div className="py-10 text-justify leading-5 text-pretty text-sm flex flex-wrap gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[90%] mx-auto">
           <p>
@@ -317,53 +235,35 @@ export const Webdev = () => {
         </div>
       </ModalContent>
       <ModalFooter className="gap-4">
-        <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+        <a
+          href="/contacts"
+          className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-black w-28"
+        >
           Contact Me
-        </button>
+        </a>
       </ModalFooter>
     </ModalBody>
   );
 };
 
 export const Workexp = () => {
-  const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
   return (
     <ModalBody>
       <ModalContent>
-        <h4 className="text-lg md:text-2xl  font-extrabold tracking-widest text-center mb-2">
+        <h4 className="text-lg md:text-2xl  font-extrabold text-center mb-8">
           Professional Experience
         </h4>
-        <h6 className="text-xs md:text-1xl  font-semibold text-center mb-8">
+        <h6 className="text-lg md:text-1xl  font-extrabold text-center mb-8">
           Work life balance{" "}
         </h6>
-        <div className="flex justify-center items-center">
-          {images.map((image, idx) => (
-            <motion.div
-              key={"images" + idx}
-              style={{
-                rotate: Math.random() * 20 - 10,
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              whileTap={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 1000,
-              }}
-              className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
-            >
-              <Image
-                src={image}
-                alt="bali images"
-                width="500"
-                height="500"
-                className="rounded-lg h-28 w-28 md:h-40 md:w-40 object-cover flex-shrink-0"
-              />
-            </motion.div>
-          ))}
+        <div className="flex justify-center ">
+          <Image
+            src={"/experience/12.png"}
+            alt="Work Experience"
+            width="900"
+            height="1200"
+            className="rounded-lg h-fit w-[90%] object-cover flex-shrink-0"
+          />
         </div>
         <div className="py-10 text-justify leading-5 text-pretty text-sm flex flex-wrap gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[90%] mx-auto">
           <p>
@@ -398,9 +298,12 @@ export const Workexp = () => {
         </div>
       </ModalContent>
       <ModalFooter className="gap-4">
-        <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+        <a
+          href="/contacts"
+          className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-black w-28"
+        >
           Contact Me
-        </button>
+        </a>
       </ModalFooter>
     </ModalBody>
   );

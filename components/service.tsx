@@ -33,9 +33,8 @@ export default function FeaturesSectionDemo() {
       className: "col-span-1 lg:col-span-3 lg:border-r  border-darker/[0.2]",
     },
     {
-      title: "What Others Say About My Expertise",
-      description:
-        "Discover testimonials from clients, mentors, and peers who have experienced the impact of my blockchain and Web3 development work.",
+      title: "My Stack",
+      description: "Tools that makes me the Dev I am so proud of",
       skeleton: <SkeletonThree />,
       className: "col-span-1 lg:col-span-3  pb-10 lg:border-none",
     },
@@ -210,14 +209,6 @@ export const SkeletonTwo = () => {
 
       <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-60  to-transparent  h-full pointer-events-none" />
       <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-60   to-transparent h-full pointer-events-none" />
-    </div>
-  );
-};
-
-export const SkeletonFour = () => {
-  return (
-    <div className="h-[57vh]  ">
-      <Testimonials />
     </div>
   );
 };

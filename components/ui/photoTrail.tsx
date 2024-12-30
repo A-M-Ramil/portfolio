@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useAnimate } from "framer-motion";
 import React, { MouseEventHandler, ReactNode, useRef } from "react";
 import { FiMousePointer } from "react-icons/fi";
@@ -10,15 +10,22 @@ export const Trail = () => {
       renderImageBuffer={50}
       rotationRange={25}
       images={[
-        "/k.jpg",
-        "/k.jpg","/k.jpg","/k.jpg","/k.jpg","/k.jpg","/k.jpg","/k.jpg",
-        "/k.jpg","/k.jpg","/k.jpg","/k.jpg","/k.jpg",
+        "/about/me2.jpg",
+        "/experience/9.png",
+        "/experience/10.png",
+        "/experience/11.png",
+        "/experience/12.png",
+        "/experience/13.png",
+        "/project/chainproof/main.png",
+        "/project/crowdether/main.png",
+        "/project/sendai/main.png",
+        "/project/cryptix/main.png",
+        "/whoamI.jpg",
       ]}
-      
     >
       <div className="grid no-scrollbar h-[33.33vh] place-content-center">
         <p className="flex items-center gap-2 text-4xl font-bold uppercase text-neutral-800">
-        <GiBackForth />
+          <GiBackForth />
         </p>
       </div>
     </MouseImageTrail>
@@ -83,7 +90,7 @@ const MouseImageTrail = ({
 
     el.style.top = `${clientY}px`;
     el.style.left = `${clientX}px`;
-  el.style.zIndex = imageRenderCount.current.toString();
+    el.style.zIndex = imageRenderCount.current.toString();
 
     const rotation = Math.random() * rotationRange;
 

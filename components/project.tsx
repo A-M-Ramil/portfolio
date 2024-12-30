@@ -25,25 +25,25 @@ const items = [
   {
     title: "CrowdEther",
     description: "Decentralized crowdfunding platform.",
-    pic: "/k.jpg",
+    pic: "/project/crowdether/main.png",
     itemlink: "/projects/1",
   },
   {
     title: "ChainProof",
     description: "Decentralized Identity Ledger",
-    pic: "/k.jpg",
+    pic: "/project/chainproof/main.png",
     itemlink: "/projects/2",
   },
   {
     title: "Cryptix",
     description: "Decentralized E-tickeing platform.",
-    pic: "/k.jpg",
+    pic: "/project/cryptix/main.png",
     itemlink: "/projects/3",
   },
   {
     title: "SendAi",
     description: "Decentralized crypto exchange platform.",
-    pic: "/k.jpg",
+    pic: "/project/sendai/main.png",
     itemlink: "/projects/4",
   },
 ];

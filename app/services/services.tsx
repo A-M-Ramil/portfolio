@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { easeIn, motion, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 
 import { Separator } from "@/components/ui/seperator";
 import Service from "@/components/service";
@@ -9,7 +9,7 @@ import BubbleText from "@/components/ui/textBubble";
 const Home = () => {
   const refA = useRef<HTMLDivElement>(null);
   const refB = useRef<HTMLDivElement>(null);
-  const refC = useRef<HTMLDivElement>(null);
+
   const { scrollY } = useScroll();
   const [sticky, setSticky] = useState(false);
 

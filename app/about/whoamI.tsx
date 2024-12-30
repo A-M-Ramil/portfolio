@@ -11,7 +11,6 @@ import Image from "next/image";
 import { MaskContainer } from "@/components/ui/mask";
 
 export default function AnimatedModalDemo() {
-  const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
   return (
     <div className=" text-darker ">
       <Modal>
