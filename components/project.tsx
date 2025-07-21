@@ -26,7 +26,7 @@ const items = [
     title: "CrowdEther",
     description: "Decentralized crowdfunding platform.",
     pic: "/project/crowdether/main.png",
-    itemlink: "/projects/1",
+    itemlink: "/projects/10",
   },
   {
     title: "ChainProof",
