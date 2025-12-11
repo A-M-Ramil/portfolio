@@ -13,6 +13,7 @@ export default function about() {
       <div className="h-[4vh]">
         <Nav />
       </div>
+
       <div className=" w-[100vw]">
         <Service />
       </div>

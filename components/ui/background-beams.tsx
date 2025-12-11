@@ -241,7 +241,9 @@ const CollisionMechanism = React.forwardRef<
           width: ballSize,
           height: ballSize,
           borderRadius: "50%",
-          backgroundColor: "#c5c69b",
+          backgroundColor: "#FEFFD2",
+          opacity: 1,
+
           position: "absolute",
           top: "20px",
           left: 0,
@@ -249,7 +251,6 @@ const CollisionMechanism = React.forwardRef<
         }}
       />
 
-      {/* Explosion stays the same */}
       <AnimatePresence>
         {collision.detected && collision.coordinates && (
           <Explosion
@@ -296,7 +297,7 @@ const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
             opacity: 0,
           }}
           transition={{ duration: Math.random() * 1.5 + 0.5, ease: "easeOut" }}
-          className="absolute h-3 w-3 rounded-full bg-gradient-to-b from-20 to-20"
+          className="absolute h-3 w-3 rounded-full opacity-0 bg-60  "
         />
       ))}
     </div>

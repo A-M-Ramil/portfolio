@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Link from "next/link";
 import Testimonials from "@/components/vertical_testamonials";
+import { HeroHighlight } from "@/components/ui/hero-highlight";
 
 export default function FeaturesSectionDemo() {
   const features = [
@@ -41,30 +42,32 @@ export default function FeaturesSectionDemo() {
   ];
   return (
     <main>
-      <div className="relative z-20  pb-10 lg:py-10 max-w-7xl mx-auto">
-        <div className="px-8 font-futural ">
-          <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-bold text-darker">
-            Blockchain & Smart Contract Development
-          </h4>
+      <HeroHighlight>
+        <div className="relative z-20  pb-10 lg:py-10 max-w-7xl mx-auto">
+          <div className="px-8 font-futural ">
+            <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-bold text-darker">
+              Blockchain & Smart Contract Development
+            </h4>
 
-          <p className="capitalize text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-5 text-center font-normal ">
-            helping businesses to leverage the power of blockchain technology to
-            enhance transparency and security
-          </p>
-        </div>
+            <p className="capitalize text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-5 text-center font-normal ">
+              helping businesses to leverage the power of blockchain technology
+              to enhance transparency and security
+            </p>
+          </div>
 
-        <div className="relative ">
-          <div className="grid grid-cols-1  font-futural font-semibold lg:grid-cols-6 mt-12 xl:border rounded-md border-darker/[0.2]">
-            {features.map((feature) => (
-              <FeatureCard key={feature.title} className={feature.className}>
-                <FeatureTitle>{feature.title}</FeatureTitle>
-                <FeatureDescription>{feature.description}</FeatureDescription>
-                <div className=" h-content w-full">{feature.skeleton}</div>
-              </FeatureCard>
-            ))}
+          <div className="relative ">
+            <div className="grid grid-cols-1  font-futural font-semibold lg:grid-cols-6 mt-12 xl:border rounded-md border-darker/[0.2]">
+              {features.map((feature) => (
+                <FeatureCard key={feature.title} className={feature.className}>
+                  <FeatureTitle>{feature.title}</FeatureTitle>
+                  <FeatureDescription>{feature.description}</FeatureDescription>
+                  <div className=" h-content w-full">{feature.skeleton}</div>
+                </FeatureCard>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </HeroHighlight>
       <div className="relative z-20  pb-10 lg:py-10 max-w-7xl lg:max-w-[80%] mx-auto">
         <Testimonials />
       </div>
