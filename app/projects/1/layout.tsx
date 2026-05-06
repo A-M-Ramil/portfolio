@@ -4,9 +4,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Projects | CrowdEther ",
-  description:
-    "CrowdEther is a decentralized CrowdFunding platform built on the Ethereum blockchain.",
+  title: "Projects | Clubify! ",
+  description: "Clubify is a multi-tenant, cloud-based SaaS application",
 };
 
 export default function RootLayout({

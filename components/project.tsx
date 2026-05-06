@@ -23,10 +23,16 @@ export default function CardItem() {
 
 const items = [
   {
+    title: "Clubify!",
+    description: "Decentralized crowdfunding platform.",
+    pic: "/project/clubify/clubify.png",
+    itemlink: "/projects/1",
+  },
+  {
     title: "CrowdEther",
     description: "Decentralized crowdfunding platform.",
     pic: "/project/crowdether/main.png",
-    itemlink: "/projects/10",
+    itemlink: "/projects/2",
   },
   {
     title: "ChainProof",
