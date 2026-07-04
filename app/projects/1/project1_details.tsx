@@ -673,10 +673,10 @@ export default function Project1Timeline() {
                 Handling Multi-Tenancy Data Leaks
               </h4>
               <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm">
-                Ensuring that a user from 'Club A' could never accidentally
-                query or mutate data belonging to 'Club B' required strict
-                middleware rules and Row-Level Security (RLS) policies within
-                Supabase and Prisma.
+                Ensuring that a user from &apos Club A &apos could never
+                accidentally query or mutate data belonging to &aposClub B&apos
+                required strict middleware rules and Row-Level Security (RLS)
+                policies within Supabase and Prisma.
               </p>
             </div>
             <div className="bg-[#FEFFD2]/50 dark:bg-[#212100] rounded-xl p-6 border-l-4 border-l-[#212100] dark:border-l-[#c5c69b] border-y border-r border-[#c5c69b]">
