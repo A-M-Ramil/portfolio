@@ -162,7 +162,7 @@ export default function Project1Timeline() {
       id: 6,
       name: "Ethers.js",
       designation: "Web3 Integration",
-      Icon: SiEthereum, // Reusing Ethereum icon as Ethers.js doesn't have a standard Simple Icon
+      Icon: SiEthereum, // Reusing Ethereum icon as Ethers.js doesn&apost have a standard Simple Icon
     },
     {
       id: 7,
@@ -442,9 +442,9 @@ export default function Project1Timeline() {
               </h4>
               <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm leading-relaxed mb-4">
                 Users authenticate seamlessly by connecting their Web3 wallets
-                (e.g., MetaMask). The connected wallet's private key acts as the
-                sole authenticator, entirely removing the need for traditional
-                passwords.
+                (e.g., MetaMask). The connected wallet&aposs private key acts as
+                the sole authenticator, entirely removing the need for
+                traditional passwords.
               </p>
             </div>
             <div className="relative overflow-hidden rounded-2xl bg-1 dark:bg-[#212100]/80 p-6 border-2 border-20 dark:border-[#c5c69b]/30 shadow-sm transition-all hover:shadow-md">
@@ -499,7 +499,7 @@ export default function Project1Timeline() {
                   The withdrawal mechanism is cryptographically hardcoded so
                   that absolutely no one—not even the platform
                   administrators—can interfere with or access the raised funds
-                  once the creator's wallet requests a valid withdrawal.
+                  once the creator&aposs wallet requests a valid withdrawal.
                 </p>
               </div>
             </div>
