@@ -10,6 +10,7 @@ import React, {
   useState,
 } from "react";
 
+import FuzzyOverlay from "@/components/ui/fuzzyoverlay";
 interface ModalContextType {
   open: boolean;
   setOpen: (open: boolean) => void;
@@ -53,8 +54,8 @@ export const ModalTrigger = ({
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
       whileHover={{ scale: 1.05 }}
       className={cn(
-        "px-4 py-2 rounded-md tracking-widest  text-black  text-center relative",
-        className
+        "px-4 py-2 rounded-md tracking-widest  text-white  text-center relative",
+        className,
       )}
       onClick={() => setOpen(true)}
     >
@@ -101,13 +102,11 @@ export const ModalBody = ({
           }}
           className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center z-50"
         >
-          <Overlay />
-
           <motion.div
             ref={modalRef}
             className={cn(
-              "min-h-[50%] max-w-[90%] max-h-[80%] md:max-w-[70%] xl:max-w-[45%] bg-1 dark:bg-neutral-950 border border-transparent dark:border-neutral-800 rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
-              className
+              "min-h-[50%] max-w-[90%] max-h-[80%] md:max-w-[70%] xl:max-w-[45%] bg-black dark:bg-neutral-950 border border-transparent dark:border-neutral-800 rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              className,
             )}
             initial={{
               opacity: 0,
@@ -133,6 +132,7 @@ export const ModalBody = ({
             }}
           >
             <CloseIcon />
+
             {children}
           </motion.div>
         </motion.div>
@@ -152,7 +152,7 @@ export const ModalContent = ({
     <div
       className={cn(
         "flex flex-col overflow-y-scroll no-scrollbar scroll-smooth flex-1 p-8 md:p-10",
-        className
+        className,
       )}
     >
       {children}
@@ -168,7 +168,7 @@ export const ModalFooter = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex justify-end p-4  bg-22", className)}>
+    <div className={cn("flex justify-end p-4  bg-black", className)}>
       {children}
     </div>
   );
@@ -210,7 +210,7 @@ const CloseIcon = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-black dark:text-white h-4 w-4 group-hover:scale-125 group-hover:rotate-3 transition duration-200"
+        className="text-white dark:text-white h-4 w-4 group-hover:scale-125 group-hover:rotate-3 transition duration-200"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M18 6l-12 12" />
@@ -222,7 +222,7 @@ const CloseIcon = () => {
 
 export const useOutsideClick = (
   ref: React.RefObject<HTMLDivElement>,
-  callback: Function
+  callback: Function,
 ) => {
   useEffect(() => {
     const listener = (event: any) => {

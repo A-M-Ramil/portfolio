@@ -46,7 +46,7 @@ export default function Menu() {
           delay: -0.75,
         });
     },
-    { scope: container }
+    { scope: container },
   );
 
   useEffect(() => {
@@ -60,23 +60,23 @@ export default function Menu() {
   return (
     <div className="menu-container z-auto " ref={container}>
       <div className="menu-bar z-50">
-        <div className="menu-logo z-9 text-1xl text-black">
+        <div className="menu-logo z-9 text-1xl text-white">
           <FlipLink href={"/"}>Home</FlipLink>
         </div>
-        <div className="menu-open z-9  text-black" onClick={toggleMenu}>
+        <div className="menu-open z-9  text-white" onClick={toggleMenu}>
           <FlipLinkOnly>Menu</FlipLinkOnly>
         </div>
       </div>
       <div className="menu-overlay z-9">
         <div className="menu-overlay-bar z-9">
-          <div className="menu-logo text-1xl text-black">
+          <div className="menu-logo text-1xl text-white">
             <FlipLink href={"/"}>Home</FlipLink>
           </div>
-          <div className="menu-logo text-1xl text-black" onClick={toggleMenu}>
+          <div className="menu-logo text-1xl text-white" onClick={toggleMenu}>
             <FlipLinkOnly>Close</FlipLinkOnly>
           </div>
         </div>
-        <div className="menu-close-icon text-black" onClick={toggleMenu}>
+        <div className="menu-close-icon text-white" onClick={toggleMenu}>
           <p>&#x2715;</p>
         </div>
         <div className="menu-copy md:px-[2em] md:py-[2em] ">
@@ -94,7 +94,7 @@ export default function Menu() {
           </div>
           <div className="menu-info ">
             <div className="menu-info-col h-full  ">
-              <div className="w-fit flex flex-col gap-y-2 xl:text-[2vw] h-fit text-black">
+              <div className="w-fit flex flex-col gap-y-2 xl:text-[2vw] h-fit text-white">
                 <FlipLink href="https://x.com/A_M_Ramil">X &#8599;</FlipLink>
                 <FlipLink href="https://github.com/A-M-Ramil">
                   GitHub &#8599;
@@ -115,14 +115,14 @@ export default function Menu() {
               </div>
             </div>
             <div className="menu-info-col  ">
-              <div className="w-fit flex flex-col gap-y-2  xl:text-[2vw] h-fit text-black">
+              <div className="w-fit flex flex-col gap-y-2  xl:text-[2vw] h-fit text-white">
                 <FlipLinkOnly>amramil.amr@gmail.com</FlipLinkOnly>
                 <FlipLinkOnly>+880 1755 219197</FlipLinkOnly>
               </div>
             </div>
           </div>
         </div>
-        <div className="menu-preview text-black"></div>
+        <div className="menu-preview text-white"></div>
       </div>
     </div>
   );

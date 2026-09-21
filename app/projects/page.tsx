@@ -3,21 +3,22 @@ import Image from "next/image";
 import Project from "./projects";
 import Nav from "@/components/menu";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
+import FuzzyOverlay from "@/components/ui/fuzzyoverlay";
 
 export default function about() {
   return (
     <main
-      className=" bg-third 
+      className=" bg-third relative overflow-hidden
    "
     >
-      <HeroHighlight>
-        <div className="h-[4vh]">
-          <Nav />{" "}
-        </div>
-        <div className=" w-[100vw]">
-          <Project />
-        </div>
-      </HeroHighlight>
+      {" "}
+      <FuzzyOverlay />
+      <div className="h-[4vh]">
+        <Nav />{" "}
+      </div>
+      <div className=" w-[100vw]">
+        <Project />
+      </div>
     </main>
   );
 }

@@ -14,9 +14,9 @@ import { MaskContainer } from "@/components/ui/mask";
 export default function AnimatedModalDemo() {
   const images = ["/k.jpg", "/k.jpg", "/k.jpg", "/k.jpg"];
   return (
-    <div className=" text-darker ">
+    <div className=" text-white ">
       <Modal>
-        <ModalTrigger className="bg-20  text-darker flex justify-center group/modal-btn">
+        <ModalTrigger className="bg-black text-white border-[#1f1f1f] border flex justify-center group/modal-btn">
           <span className=" text-center ">Learn More</span>
         </ModalTrigger>
 
@@ -35,12 +35,12 @@ export default function AnimatedModalDemo() {
                 width="900"
                 height="1200"
                 unoptimized
-                className="rounded-lg h-fit w-[100%] object-cover flex-shrink-0"
+                className="rounded-lg h-fit w-[100%] opacity-60 object-cover flex-shrink-0"
               />
             </div>
             <MaskContainer
               revealText={
-                <p className="py-10 text-justify bg-1 text-black leading-5 text-pretty text-sm  gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[100%] mx-auto">
+                <p className="py-10 text-justify bg-black text-white leading-5 text-pretty text-sm  gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[100%] mx-auto">
                   From a young age, I was always that kid who couldn’t get
                   enough of gaming, tinkering with software, and exploring all
                   things tech. Yet, despite my fascination with technology, I

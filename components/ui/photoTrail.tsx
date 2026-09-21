@@ -24,7 +24,7 @@ export const Trail = () => {
       ]}
     >
       <div className="grid no-scrollbar h-[33.33vh] place-content-center">
-        <p className="flex items-center gap-2 text-4xl font-bold uppercase text-neutral-800">
+        <p className="flex items-center gap-2 text-4xl font-bold uppercase text-neutral-400">
           <GiBackForth />
         </p>
       </div>
@@ -57,7 +57,7 @@ const MouseImageTrail = ({
       clientX,
       clientY,
       lastRenderPosition.current.x,
-      lastRenderPosition.current.y
+      lastRenderPosition.current.y,
     );
 
     if (distance >= renderImageBuffer) {
@@ -72,7 +72,7 @@ const MouseImageTrail = ({
     x1: number,
     y1: number,
     x2: number,
-    y2: number
+    y2: number,
   ) => {
     const deltaX = x2 - x1;
     const deltaY = y2 - y1;
@@ -111,7 +111,7 @@ const MouseImageTrail = ({
           }`,
         ],
       },
-      { type: "spring", damping: 15, stiffness: 200 }
+      { type: "spring", damping: 15, stiffness: 200 },
     );
 
     animate(
@@ -119,7 +119,7 @@ const MouseImageTrail = ({
       {
         opacity: [1, 0],
       },
-      { ease: "linear", duration: 0.3, delay: 3 }
+      { ease: "linear", duration: 0.3, delay: 3 },
     );
 
     imageRenderCount.current = imageRenderCount.current + 1;

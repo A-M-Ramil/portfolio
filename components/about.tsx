@@ -17,7 +17,7 @@ import { link } from "fs";
 
 export default function Bento() {
   return (
-    <BentoGrid className="font-futurabk z-5 pt-4 px-5 w-screen max-w-[95vw] md:max-w-[90vw] xl:max-w-[70vw] pb-[5vh] mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="font-playfair  z-5 pt-4 px-5 w-screen max-w-[95vw] md:max-w-[90vw] xl:max-w-[70vw] pb-[5vh] mx-auto md:auto-rows-[20rem]">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -69,7 +69,7 @@ const SkeletonTwo = () => {
           style={{
             maxWidth: Math.random() * (100 - 40) + 40 + "%",
           }}
-          className="flex flex-row rounded-full border border-20 p-2  items-center space-x-2 bg-20 w-full h-4"
+          className="flex flex-row rounded-full border border-[#1f1f1f] p-2  items-center space-x-2 bg-black w-full h-4"
         ></motion.div>
       ))}
     </motion.div>
@@ -81,8 +81,8 @@ const SkeletonOne = () => {
     <div className="w-content group/card ">
       <div
         className={cn(
-          " cursor-pointer overflow-hidden  relative card h-[20vh] rounded-md shadow-xl  mx-auto backgroundImage flex flex-col justify-between p-4",
-          `bg-[url("/whoamI.jpg")] bg-cover`
+          " cursor-pointer overflow-hidden  relative card h-[20vh] rounded-md shadow-xl opacity-40  mx-auto backgroundImage flex flex-col justify-between p-4",
+          `bg-[url("/whoamI.jpg")] bg-cover`,
         )}
       >
         <div className="absolute w-full h-full min-h-[6rem] top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
@@ -112,10 +112,9 @@ const SkeletonThree = () => {
       }}
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
       style={{
-        background: `linear-gradient(-45deg, #FEFFD2,
-        #cee1b1,
-        #9dc496,
-        #6aa780)`,
+        background: `linear-gradient(-45deg, #1f1f1f, 
+        #2e2e2e )`,
+
         backgroundSize: "400% 400%",
       }}
     >
@@ -154,31 +153,31 @@ const SkeletonFour = () => {
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl  p-4 bg-60 border-black/[0.1] border  flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl  p-4 bg-black border-[#1f1f1f] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="/about/me2.jpg"
+          src="/about/me3.jpg"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center text-5 font-semibold  mt-4">
+        <p className="sm:text-sm text-xs text-center text-white font-semibold  mt-4">
           Hmmm... A Researcher
         </p>
         <p className="border border-primary font-semibold  bg-red-900/20 text-primary text-xs rounded-full px-2 py-0.5 mt-4">
           Delusional
         </p>
       </motion.div>
-      <motion.div className="h-full relative  z-1 w-1/3 rounded-2xl  p-4 bg-60 border-black/[0.1] border flex flex-col items-center justify-center">
+      <motion.div className="h-full relative  z-1 w-1/3 rounded-2xl  p-4 bg-black border-[#1f1f1f] border flex flex-col items-center justify-center">
         <Image
-          src="/about/me2.jpg"
+          src="/about/me3.jpg"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-5 mt-4">
+        <p className="sm:text-sm text-xs text-center text-white font-semibold  mt-4">
           Nooooooo....An Entrepreneur
         </p>
         <p className="border border-green-500 font-semibold bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
@@ -187,16 +186,16 @@ const SkeletonFour = () => {
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl -z-2 p-4 bg-60 border-black/[0.1] border  flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl -z-2 p-4 bg-black border-[#1f1f1f] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="/about/me2.jpg"
+          src="/about/me3.jpg"
           alt="avatar"
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-5 mt-4">
+        <p className="sm:text-sm text-xs text-center text-white font-semibold  mt-4">
           But wait...A Developer
         </p>
         <p className="border border-orange-500 font-semibold bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">

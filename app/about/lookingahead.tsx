@@ -14,9 +14,9 @@ import { MaskContainer } from "@/components/ui/mask";
 export default function AnimatedModalDemo() {
   const images = ["/about/business.gif", "/about/business2.gif"];
   return (
-    <div className=" text-darker ">
+    <div className=" text-white ">
       <Modal>
-        <ModalTrigger className="bg-20  text-darker flex justify-center group/modal-btn">
+        <ModalTrigger className="bg-black  text-white border-[#1f1f1f] border flex justify-center group/modal-btn">
           <span className=" text-center ">Learn More</span>
         </ModalTrigger>
 
@@ -46,7 +46,7 @@ export default function AnimatedModalDemo() {
                     rotate: 0,
                     zIndex: 1000,
                   }}
-                  className="rounded-xl -mr-4 mt-4 p-1  bg-1 border border-1 flex-shrink-0 overflow-hidden"
+                  className="rounded-xl -mr-4 mt-4 p-1  bg-[#1f1f1f] border border-black flex-shrink-0 overflow-hidden"
                 >
                   <Image
                     src={image}
@@ -61,7 +61,7 @@ export default function AnimatedModalDemo() {
             </div>
             <MaskContainer
               revealText={
-                <p className="py-10 text-justify bg-1 text-black leading-5 text-pretty text-sm  gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[100%] mx-auto">
+                <p className="py-10 text-justify bg-black text-white leading-5 text-pretty text-sm  gap-x-4 gap-y-6 tracking-wide  items-start justify-start w-[100%] mx-auto">
                   As I look to the future, I see myself evolving into an
                   entrepreneur who has successfully launched innovative
                   businesses that make a meaningful impact. My passion for
@@ -99,7 +99,7 @@ export default function AnimatedModalDemo() {
           <ModalFooter className="gap-4">
             <a
               href="/contacts"
-              className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-black w-28"
+              className="bg-black text-white dark:bg-white dark:text-black text-sm px-4 py-1 rounded-md border border-[#1f1f1f] w-28"
             >
               Contact Me
             </a>

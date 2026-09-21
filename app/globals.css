@@ -8,6 +8,6 @@
 }
 
 ::selection {
-  background-color: black; /* Background color when text is selected */
-  color: white; /* Text color when text is selected */
+  background-color: white; /* Background color when text is selected */
+  color: black; /* Text color when text is selected */
 }

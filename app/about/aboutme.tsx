@@ -6,6 +6,7 @@ import About from "@/components/about";
 import { Separator } from "@/components/ui/seperator";
 import BubbleText from "@/components/ui/textBubble";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams";
+import { KineticText } from "@/components/ui/texty";
 
 const Home = () => {
   const refA = useRef<HTMLDivElement>(null);
@@ -28,12 +29,12 @@ const Home = () => {
     <div className="snap-y mx-2 snap-mandatory   no-scrollbar">
       <section ref={refA} className="h-[29.33vh] snap-center ">
         <div className="flex items-end md:justify-center  h-[29vh]">
-          <h1
-            className="text-[29vw] leading-[5.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
-        md:text-[16.5vw] md:leading-[8rem] lg:text-[11vw] lg:leading-[9rem] xl:tracking-[-0.9rem] 2xl:tracking-[-1.6rem] xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none  text-black"
+          <div
+            className=" font-playfair text-[29vw] tracking-[-.6rem]  min-[460px]:text-[27vw] lg:tracking-tighter min-[520px]:text-[23vw] sm:text-[19vw] 
+        md:text-[16.5vw]  lg:text-[11vw]     2xl:text-[14vw] leading-none  text-white"
           >
-            <BubbleText text="Munim Ramil" />
-          </h1>
+            <KineticText text="munim ramil" />
+          </div>
         </div>
         <Separator orientation="horizontal" />
       </section>
@@ -44,14 +45,13 @@ const Home = () => {
           sticky ? "sticky " : ""
         }`}
       >
-        <BackgroundBeamsWithCollision>
-          <div
-            className=" text-[31vw] z-20 leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
-        md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] lg:leading-[9rem] md:justify-center  xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none flex items-end  text-black  h-[24vh] "
-          >
-            <BubbleText text="About" />
-          </div>
-        </BackgroundBeamsWithCollision>
+        <div
+          className=" font-playfair text-[15vw] min-[460px]:text-[15vw] min-[520px]:text-[15vw] sm:text-[10vw] 
+        md:text-[10vw] lg:tracking-tighter lg:text-[8vw]  md:justify-center   2xl:text-[6vw]  flex items-end  text-white  h-[24vh] "
+        >
+          <KineticText text="About" />
+        </div>
+
         <Separator orientation="horizontal" />
       </section>
 
