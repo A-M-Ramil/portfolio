@@ -33,76 +33,67 @@ const PhaseCard = ({
 }: PhaseCardProps) => {
   const colorConfig = {
     1: {
-      primary: "#212100",
-      secondary: "#c5c69b",
-      background: "rgba(33, 33, 0, 0.1)",
-      border: "rgba(197, 198, 155, 0.3)",
-      gradient: "from-[#212100]/20 to-transparent",
+      primary: "#E5E5E5",
+      secondary: "#A3A3A3",
+      background: "rgba(229, 229, 229, 0.1)",
+      border: "rgba(229, 229, 229, 0.3)",
+      gradient: "from-[#E5E5E5]/20 to-transparent",
     },
     2: {
-      primary: "#212100",
-      secondary: "#c5c69b",
-      background: "rgba(33, 33, 0, 0.08)",
-      border: "rgba(197, 198, 155, 0.25)",
-      gradient: "from-[#212100]/15 to-transparent",
+      primary: "#E5E5E5",
+      secondary: "#A3A3A3",
+      background: "rgba(229, 229, 229, 0.08)",
+      border: "rgba(229, 229, 229, 0.25)",
+      gradient: "from-[#E5E5E5]/15 to-transparent",
     },
     3: {
-      primary: "#212100",
-      secondary: "#c5c69b",
-      background: "rgba(33, 33, 0, 0.06)",
-      border: "rgba(197, 198, 155, 0.2)",
-      gradient: "from-[#212100]/10 to-transparent",
+      primary: "#E5E5E5",
+      secondary: "#A3A3A3",
+      background: "rgba(229, 229, 229, 0.06)",
+      border: "rgba(229, 229, 229, 0.2)",
+      gradient: "from-[#E5E5E5]/10 to-transparent",
     },
     4: {
-      primary: "#212100",
-      secondary: "#c5c69b",
-      background: "rgba(33, 33, 0, 0.04)",
-      border: "rgba(197, 198, 155, 0.15)",
-      gradient: "from-[#212100]/5 to-transparent",
+      primary: "#E5E5E5",
+      secondary: "#A3A3A3",
+      background: "rgba(229, 229, 229, 0.04)",
+      border: "rgba(229, 229, 229, 0.15)",
+      gradient: "from-[#E5E5E5]/5 to-transparent",
     },
     5: {
-      primary: "#212100",
-      secondary: "#c5c69b",
-      background: "rgba(33, 33, 0, 0.02)",
-      border: "rgba(197, 198, 155, 0.1)",
-      gradient: "from-[#212100]/3 to-transparent",
+      primary: "#E5E5E5",
+      secondary: "#A3A3A3",
+      background: "rgba(229, 229, 229, 0.02)",
+      border: "rgba(229, 229, 229, 0.1)",
+      gradient: "from-[#E5E5E5]/3 to-transparent",
     },
   };
-
   const colors = colorConfig[colorVariation] || colorConfig[1];
 
   return (
     <div className="group relative">
       <div
-        className={`absolute -inset-4 bg-gradient-to-r ${colors.gradient} dark:from-[#212100]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+        className={`absolute -inset-4 bg-gradient-to-r ${colors.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl`}
       ></div>
-      <div
-        className={`relative bg-1 dark:bg-[#212100] rounded-2xl p-7 border-2 border-[#c5c69b] dark:border-[#c5c69b]/30 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
-      >
+      <div className="relative bg-black/40 backdrop-blur-md rounded-2xl p-7 border border-[#E5E5E5]/20 shadow-lg hover:shadow-2xl hover:border-[#E5E5E5]/40 transition-all duration-300 transform hover:-translate-y-1">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-4">
             <div className="relative">
-              <div className="w-12 h-12 rounded-xl bg-[#212100] dark:bg-[#c5c69b] flex items-center justify-center shadow-lg">
-                <span className="text-[#FEFFD2] dark:text-[#212100] font-bold text-lg">
+              <div className="w-12 h-12 rounded-xl bg-[#E5E5E5] flex items-center justify-center shadow-lg">
+                <span className="text-black font-bold text-lg">
                   {phaseNumber}
                 </span>
               </div>
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#c5c69b] dark:bg-[#212100] rounded-full flex items-center justify-center">
-                <div className="w-2 h-2 bg-[#212100] dark:bg-[#c5c69b] rounded-full"></div>
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#A3A3A3] rounded-full flex items-center justify-center border-2 border-black">
+                <div className="w-2 h-2 bg-black rounded-full"></div>
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-[#212100] dark:text-[#FEFFD2]">
-                {title}
-              </h3>
-              <p className="text-[#212100]/80 dark:text-[#c5c69b] font-semibold">
-                {timeframe}
-              </p>
+              <h3 className="text-xl font-bold text-[#E5E5E5]">{title}</h3>
+              <p className="text-[#A3A3A3] font-semibold">{timeframe}</p>
             </div>
           </div>
-          <div
-            className={`px-4 py-2 bg-20 dark:bg-[#212100] text-[#212100] dark:text-[#c5c69b] text-sm font-medium rounded-full border border-[#c5c69b] dark:border-[#c5c69b]/30`}
-          >
+          <div className="px-4 py-2 bg-[#E5E5E5]/10 text-[#E5E5E5] text-sm font-medium rounded-full border border-[#E5E5E5]/20">
             {tag}
           </div>
         </div>
@@ -110,14 +101,12 @@ const PhaseCard = ({
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`bg-60 dark:bg-[#212100]/80 rounded-xl p-4 border border-20 dark:border-[#c5c69b]/20`}
+              className="bg-[#E5E5E5]/5 rounded-xl p-4 border border-[#E5E5E5]/10 hover:bg-[#E5E5E5]/10 transition-colors"
             >
-              <h4 className="font-semibold text-[#212100] dark:text-[#c5c69b] mb-2">
+              <h4 className="font-semibold text-[#E5E5E5] mb-2">
                 {feature.title}
               </h4>
-              <p className="text-[#212100]/70 dark:text-[#c5c69b]/80 text-sm">
-                {feature.description}
-              </p>
+              <p className="text-[#A3A3A3] text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -301,24 +290,21 @@ export default function Project1Timeline() {
       title: "Project Overview",
       content: (
         <div className="space-y-10">
-          <div className="relative overflow-hidden rounded-3xl bg-1 p-8 md:p-10 border-2 border-20">
+          <div className="relative overflow-hidden rounded-3xl bg-black/40 backdrop-blur-md p-8 md:p-10 border border-[#E5E5E5]/20 shadow-2xl">
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-20 dark:bg-[#212100]/80 rounded-full border border-[#c5c69b] dark:border-[#c5c69b]/30">
-                <div className="w-2 h-2 rounded-full bg-[#212100] dark:bg-[#c5c69b] "></div>
-                <span className="text-sm font-medium text-[#212100] dark:text-[#c5c69b]">
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#E5E5E5]/10 rounded-full border border-[#E5E5E5]/20">
+                <div className="w-2 h-2 rounded-full bg-[#E5E5E5]"></div>
+                <span className="text-sm font-medium text-[#E5E5E5]">
                   CSE391: Programming for the Internet Completed Project
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl font-bold text-[#212100] dark:text-[#FEFFD2] mb-6 leading-tight">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#E5E5E5] mb-6 leading-tight">
                 From Concept to Production:{" "}
-                <span className="text-[#212100] dark:text-[#c5c69b]">
-                  Clubify
-                </span>{" "}
-                Evolution
+                <span className="text-white">Clubify</span> Evolution
               </h1>
 
-              <p className="text-lg text-[#212100]/80 dark:text-[#c5c69b] leading-relaxed max-w-3xl mb-8">
+              <p className="text-lg text-[#A3A3A3] leading-relaxed max-w-3xl mb-8">
                 What began as a semester project evolved into a comprehensive
                 full-stack SaaS platform. Over 7 weeks of agile development, I
                 transformed initial concepts into a production-ready application
@@ -332,7 +318,7 @@ export default function Project1Timeline() {
                   href="https://clubify-pi.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#212100] dark:bg-[#c5c69b] text-[#FEFFD2] dark:text-[#212100] font-bold rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#E5E5E5] text-black font-bold rounded-xl transition-all duration-300 hover:shadow-[0_0_20px_rgba(229,229,229,0.3)] hover:-translate-y-1"
                 >
                   Visit Live Site
                   <svg
@@ -350,12 +336,12 @@ export default function Project1Timeline() {
                   </svg>
                 </a>
 
-                {/* Optional Github Link */}
+                {/* Github Link */}
                 <a
                   href="https://github.com/A-M-Ramil/Clubify"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-[#212100] dark:text-[#c5c69b] font-bold rounded-xl border-2 border-[#212100] dark:border-[#c5c69b] transition-all duration-300 hover:bg-[#212100]/5 dark:hover:bg-[#c5c69b]/10"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-[#E5E5E5] font-bold rounded-xl border-2 border-[#E5E5E5]/30 transition-all duration-300 hover:bg-[#E5E5E5]/10 hover:border-[#E5E5E5]"
                 >
                   Source Code
                   <svg
@@ -372,11 +358,10 @@ export default function Project1Timeline() {
                   </svg>
                 </a>
               </div>
-              {/* -------------------------------------- */}
             </div>
           </div>
 
-          {/* Development Phases - Using the modular component */}
+          {/* Development Phases */}
           <div className="space-y-6">
             {phasesData.map((phase, index) => (
               <PhaseCard
@@ -391,105 +376,93 @@ export default function Project1Timeline() {
             ))}
           </div>
 
-          {/* Outcome Summary - Updated with your colors */}
-          <div className="relative overflow-hidden rounded-2xl bg-1 dark:bg-[#212100]/80 p-8 border-2 border-20 shadow-lg">
+          {/* Outcome Summary */}
+          <div className="relative overflow-hidden rounded-2xl bg-black/40 backdrop-blur-md p-8 border border-[#E5E5E5]/20 shadow-lg">
             <div className="relative z-10">
               <div className="flex xl:flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-[#212100] dark:text-[#FEFFD2] mb-3">
+                  <h3 className="text-2xl font-bold text-[#E5E5E5] mb-3">
                     Final Outcome: Production-Ready SaaS Platform
                   </h3>
-                  <p className="text-[#212100]/70 dark:text-[#c5c69b] text-lg">
+                  <p className="text-[#A3A3A3] text-lg">
                     The project culminated in a fully functional, scalable
                     application that successfully integrates multiple complex
                     systems into a cohesive user experience.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <div className="px-4 py-2 bg-[#FEFFD2] dark:bg-[#212100] text-[#212100] dark:text-[#c5c69b] font-semibold rounded-lg border border-[#c5c69b] dark:border-[#c5c69b]/30">
+                  <div className="px-4 py-2 bg-[#E5E5E5]/10 text-[#E5E5E5] font-semibold rounded-lg border border-[#E5E5E5]/20">
                     Multi-Tenant Architecture
                   </div>
-                  <div className="px-4 py-2 bg-[#FEFFD2] dark:bg-[#212100] text-[#212100] dark:text-[#c5c69b] font-semibold rounded-lg border border-[#c5c69b] dark:border-[#c5c69b]/30">
+                  <div className="px-4 py-2 bg-[#E5E5E5]/10 text-[#E5E5E5] font-semibold rounded-lg border border-[#E5E5E5]/20">
                     Secure Payments
                   </div>
-                  <div className="px-4 py-2 bg-[#FEFFD2] dark:bg-[#212100] text-[#212100] dark:text-[#c5c69b] font-semibold rounded-lg border border-[#c5c69b] dark:border-[#c5c69b]/30">
+                  <div className="px-4 py-2 bg-[#E5E5E5]/10 text-[#E5E5E5] font-semibold rounded-lg border border-[#E5E5E5]/20">
                     6+ Service Integrations
                   </div>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-[#FEFFD2]/50 dark:bg-[#212100] rounded-xl p-6 border border-[#c5c69b] dark:border-[#c5c69b]/30">
-                  <h4 className="font-bold text-lg text-[#212100] dark:text-[#FEFFD2] mb-3 flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-[#212100] dark:bg-[#c5c69b]"></div>
+                <div className="bg-[#E5E5E5]/5 rounded-xl p-6 border border-[#E5E5E5]/10">
+                  <h4 className="font-bold text-lg text-[#E5E5E5] mb-3 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-[#E5E5E5]"></div>
                     Key Achievements
                   </h4>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-[#FEFFD2] dark:bg-[#212100] flex items-center justify-center mt-0.5 border border-[#c5c69b]">
-                        <span className="text-[#212100] dark:text-[#c5c69b] text-sm">
-                          ✓
-                        </span>
+                      <div className="w-6 h-6 rounded-lg bg-[#E5E5E5] flex items-center justify-center mt-0.5 shadow-sm">
+                        <span className="text-black text-sm font-bold">✓</span>
                       </div>
-                      <span className="text-[#212100] dark:text-[#c5c69b]">
+                      <span className="text-[#A3A3A3]">
                         Real payment processing integration
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-[#FEFFD2] dark:bg-[#212100] flex items-center justify-center mt-0.5 border border-[#c5c69b]">
-                        <span className="text-[#212100] dark:text-[#c5c69b] text-sm">
-                          ✓
-                        </span>
+                      <div className="w-6 h-6 rounded-lg bg-[#E5E5E5] flex items-center justify-center mt-0.5 shadow-sm">
+                        <span className="text-black text-sm font-bold">✓</span>
                       </div>
-                      <span className="text-[#212100] dark:text-[#c5c69b]">
+                      <span className="text-[#A3A3A3]">
                         Hybrid authorization model (RBAC + ABAC)
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-[#FEFFD2] dark:bg-[#212100] flex items-center justify-center mt-0.5 border border-[#c5c69b]">
-                        <span className="text-[#212100] dark:text-[#c5c69b] text-sm">
-                          ✓
-                        </span>
+                      <div className="w-6 h-6 rounded-lg bg-[#E5E5E5] flex items-center justify-center mt-0.5 shadow-sm">
+                        <span className="text-black text-sm font-bold">✓</span>
                       </div>
-                      <span className="text-[#212100] dark:text-[#c5c69b]">
+                      <span className="text-[#A3A3A3]">
                         Production deployment with Docker
                       </span>
                     </li>
                   </ul>
                 </div>
-                <div className="bg-[#FEFFD2]/50 dark:bg-[#212100] rounded-xl p-6 border border-[#c5c69b] dark:border-[#c5c69b]/30">
-                  <h4 className="font-bold text-lg text-[#212100] dark:text-[#FEFFD2] mb-3 flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-[#212100] dark:bg-[#c5c69b]"></div>
+                <div className="bg-[#E5E5E5]/5 rounded-xl p-6 border border-[#E5E5E5]/10">
+                  <h4 className="font-bold text-lg text-[#E5E5E5] mb-3 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-[#E5E5E5]"></div>
                     Skills Demonstrated
                   </h4>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-[#FEFFD2] dark:bg-[#212100] flex items-center justify-center mt-0.5 border border-[#c5c69b]">
-                        <span className="text-[#212100] dark:text-[#c5c69b] text-sm">
-                          ★
-                        </span>
+                      <div className="w-6 h-6 rounded-lg bg-[#E5E5E5] flex items-center justify-center mt-0.5 shadow-sm">
+                        <span className="text-black text-sm font-bold">★</span>
                       </div>
-                      <span className="text-[#212100] dark:text-[#c5c69b]">
+                      <span className="text-[#A3A3A3]">
                         Full-stack architecture design
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-[#FEFFD2] dark:bg-[#212100] flex items-center justify-center mt-0.5 border border-[#c5c69b]">
-                        <span className="text-[#212100] dark:text-[#c5c69b] text-sm">
-                          ★
-                        </span>
+                      <div className="w-6 h-6 rounded-lg bg-[#E5E5E5] flex items-center justify-center mt-0.5 shadow-sm">
+                        <span className="text-black text-sm font-bold">★</span>
                       </div>
-                      <span className="text-[#212100] dark:text-[#c5c69b]">
+                      <span className="text-[#A3A3A3]">
                         Third-party service integration
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-[#FEFFD2] dark:bg-[#212100] flex items-center justify-center mt-0.5 border border-[#c5c69b]">
-                        <span className="text-[#212100] dark:text-[#c5c69b] text-sm">
-                          ★
-                        </span>
+                      <div className="w-6 h-6 rounded-lg bg-[#E5E5E5] flex items-center justify-center mt-0.5 shadow-sm">
+                        <span className="text-black text-sm font-bold">★</span>
                       </div>
-                      <span className="text-[#212100] dark:text-[#c5c69b]">
+                      <span className="text-[#A3A3A3]">
                         Complex state & permission management
                       </span>
                     </li>
@@ -502,9 +475,9 @@ export default function Project1Timeline() {
       ),
     },
     {
-      title: "Tech_Stack",
+      title: "Tech Stack",
       content: (
-        <div className="flex h-fit  flex-row mb-10 w-full">
+        <div className="flex h-fit flex-row mb-10 w-full">
           <AnimatedTooltip items={items} />
         </div>
       ),
@@ -513,36 +486,36 @@ export default function Project1Timeline() {
       title: "Architecture & Design",
       content: (
         <div className="space-y-8">
-          <p className="text-lg text-[#212100]/80 dark:text-[#c5c69b] leading-relaxed max-w-3xl">
+          <p className="text-lg text-[#A3A3A3] leading-relaxed max-w-3xl">
             Clubify operates on a robust multi-tenant architecture designed to
             securely separate data while maintaining a unified ecosystem for
             both student organizations and corporate sponsors.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative overflow-hidden rounded-2xl bg-1 dark:bg-[#212100]/80 p-6 border-2 border-20 dark:border-[#c5c69b]/30 shadow-sm transition-all hover:shadow-md">
-              <h4 className="text-xl font-bold text-[#212100] dark:text-[#FEFFD2] mb-3">
+            <div className="relative overflow-hidden rounded-2xl bg-[#E5E5E5]/5 backdrop-blur-sm p-6 border border-[#E5E5E5]/10 shadow-sm transition-all hover:border-[#E5E5E5]/30 hover:shadow-md">
+              <h4 className="text-xl font-bold text-[#E5E5E5] mb-3">
                 The Club Portal
               </h4>
-              <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm leading-relaxed mb-4">
+              <p className="text-[#A3A3A3] text-sm leading-relaxed mb-4">
                 A dedicated workspace for internal operations. Features include
                 member onboarding, role assignment, event creation, and
                 newsletter dispatching. Data is strictly isolated so clubs only
                 access their own metrics.
               </p>
-              <div className="inline-block px-3 py-1 bg-[#FEFFD2] dark:bg-[#c5c69b]/20 text-[#212100] dark:text-[#c5c69b] text-xs font-semibold rounded-full border border-[#c5c69b]/50">
+              <div className="inline-block px-3 py-1 bg-[#E5E5E5]/10 text-[#E5E5E5] text-xs font-semibold rounded-full border border-[#E5E5E5]/20">
                 Internal Operations
               </div>
             </div>
-            <div className="relative overflow-hidden rounded-2xl bg-1 dark:bg-[#212100]/80 p-6 border-2 border-20 dark:border-[#c5c69b]/30 shadow-sm transition-all hover:shadow-md">
-              <h4 className="text-xl font-bold text-[#212100] dark:text-[#FEFFD2] mb-3">
+            <div className="relative overflow-hidden rounded-2xl bg-[#E5E5E5]/5 backdrop-blur-sm p-6 border border-[#E5E5E5]/10 shadow-sm transition-all hover:border-[#E5E5E5]/30 hover:shadow-md">
+              <h4 className="text-xl font-bold text-[#E5E5E5] mb-3">
                 Sponsor Dashboard
               </h4>
-              <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm leading-relaxed mb-4">
+              <p className="text-[#A3A3A3] text-sm leading-relaxed mb-4">
                 A discovery and negotiation hub for verified companies. Sponsors
                 can browse events by university, category, or location, and send
                 direct sponsorship proposals with tracked payment histories.
               </p>
-              <div className="inline-block px-3 py-1 bg-[#FEFFD2] dark:bg-[#c5c69b]/20 text-[#212100] dark:text-[#c5c69b] text-xs font-semibold rounded-full border border-[#c5c69b]/50">
+              <div className="inline-block px-3 py-1 bg-[#E5E5E5]/10 text-[#E5E5E5] text-xs font-semibold rounded-full border border-[#E5E5E5]/20">
                 B2B Discovery
               </div>
             </div>
@@ -554,21 +527,21 @@ export default function Project1Timeline() {
       title: "Technical Deep Dive",
       content: (
         <div className="space-y-6">
-          <p className="text-lg text-[#212100]/80 dark:text-[#c5c69b] leading-relaxed max-w-3xl mb-6">
+          <p className="text-lg text-[#A3A3A3] leading-relaxed max-w-3xl mb-6">
             Moving beyond basic CRUD operations, the project tackled complex
             real-world SaaS requirements, specifically focusing on granular
             security and secure financial transactions.
           </p>
           <div className="space-y-4">
-            <div className="bg-[#FEFFD2]/50 dark:bg-[#212100] rounded-xl p-6 border border-[#c5c69b] dark:border-[#c5c69b]/30 flex flex-col md:flex-row gap-4 items-start">
-              <div className="w-10 h-10 rounded-lg bg-[#212100] dark:bg-[#c5c69b] flex items-center justify-center shrink-0">
-                <SiClerk className="text-[#FEFFD2] dark:text-[#212100] text-xl" />
+            <div className="bg-[#E5E5E5]/5 backdrop-blur-sm rounded-xl p-6 border border-[#E5E5E5]/10 flex flex-col md:flex-row gap-4 items-start hover:bg-[#E5E5E5]/10 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-[#E5E5E5]/10 flex items-center justify-center shrink-0 border border-[#E5E5E5]/20">
+                <SiClerk className="text-[#E5E5E5] text-xl" />
               </div>
               <div>
-                <h4 className="font-bold text-lg text-[#212100] dark:text-[#FEFFD2] mb-2">
+                <h4 className="font-bold text-lg text-[#E5E5E5] mb-2">
                   AuthN vs. AuthZ Isolation
                 </h4>
-                <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm">
+                <p className="text-[#A3A3A3] text-sm">
                   Implemented a clear boundary between Identity (Clerk) and
                   Access Control (Permit.io). While Clerk handles OAuth and
                   session security, Permit.io executes a hybrid RBAC-ABAC model
@@ -577,15 +550,15 @@ export default function Project1Timeline() {
                 </p>
               </div>
             </div>
-            <div className="bg-[#FEFFD2]/50 dark:bg-[#212100] rounded-xl p-6 border border-[#c5c69b] dark:border-[#c5c69b]/30 flex flex-col md:flex-row gap-4 items-start">
-              <div className="w-10 h-10 rounded-lg bg-[#212100] dark:bg-[#c5c69b] flex items-center justify-center shrink-0">
-                <SiPaddle className="text-[#FEFFD2] dark:text-[#212100] text-xl" />
+            <div className="bg-[#E5E5E5]/5 backdrop-blur-sm rounded-xl p-6 border border-[#E5E5E5]/10 flex flex-col md:flex-row gap-4 items-start hover:bg-[#E5E5E5]/10 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-[#E5E5E5]/10 flex items-center justify-center shrink-0 border border-[#E5E5E5]/20">
+                <SiPaddle className="text-[#E5E5E5] text-xl" />
               </div>
               <div>
-                <h4 className="font-bold text-lg text-[#212100] dark:text-[#FEFFD2] mb-2">
+                <h4 className="font-bold text-lg text-[#E5E5E5] mb-2">
                   Monetization Engine
                 </h4>
-                <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm">
+                <p className="text-[#A3A3A3] text-sm">
                   Integrated Paddle as the Merchant of Record to handle complex
                   B2B sponsorship payments, sponsor subscription tiers, and
                   automated platform commission calculations on successful
@@ -593,15 +566,15 @@ export default function Project1Timeline() {
                 </p>
               </div>
             </div>
-            <div className="bg-[#FEFFD2]/50 dark:bg-[#212100] rounded-xl p-6 border border-[#c5c69b] dark:border-[#c5c69b]/30 flex flex-col md:flex-row gap-4 items-start">
-              <div className="w-10 h-10 rounded-lg bg-[#212100] dark:bg-[#c5c69b] flex items-center justify-center shrink-0">
-                <SiDocker className="text-[#FEFFD2] dark:text-[#212100] text-xl" />
+            <div className="bg-[#E5E5E5]/5 backdrop-blur-sm rounded-xl p-6 border border-[#E5E5E5]/10 flex flex-col md:flex-row gap-4 items-start hover:bg-[#E5E5E5]/10 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-[#E5E5E5]/10 flex items-center justify-center shrink-0 border border-[#E5E5E5]/20">
+                <SiDocker className="text-[#E5E5E5] text-xl" />
               </div>
               <div>
-                <h4 className="font-bold text-lg text-[#212100] dark:text-[#FEFFD2] mb-2">
+                <h4 className="font-bold text-lg text-[#E5E5E5] mb-2">
                   Deployment Architecture
                 </h4>
-                <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm">
+                <p className="text-[#A3A3A3] text-sm">
                   Containerized the Next.js application using Docker to ensure
                   environmental parity across development, testing, and
                   production stages, paving the way for scalable cloud hosting.
@@ -616,42 +589,42 @@ export default function Project1Timeline() {
       title: "Key Highlights",
       content: (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative overflow-hidden rounded-2xl bg-1 dark:bg-[#212100]/80 p-8 border-2 border-20 dark:border-[#c5c69b]/30 shadow-lg group hover:-translate-y-1 transition-transform duration-300">
-            <h3 className="text-2xl font-bold text-[#212100] dark:text-[#FEFFD2] mb-4">
+          <div className="relative overflow-hidden rounded-2xl bg-[#E5E5E5]/5 backdrop-blur-sm p-8 border border-[#E5E5E5]/10 shadow-lg group hover:-translate-y-1 transition-transform duration-300">
+            <h3 className="text-2xl font-bold text-[#E5E5E5] mb-4">
               Global Event Showcase
             </h3>
-            <p className="text-[#212100]/80 dark:text-[#c5c69b] mb-6">
+            <p className="text-[#A3A3A3] mb-6">
               A dynamic landing page featuring an interactive map of ongoing and
               upcoming events across universities. Designed to maximize
               visibility for trending events and attract top-tier sponsors.
             </p>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2 text-sm text-[#212100] dark:text-[#c5c69b]">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#212100] dark:bg-[#c5c69b]"></div>
+              <li className="flex items-center gap-2 text-sm text-[#E5E5E5]">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#E5E5E5]"></div>
                 Clickable interactive event posters
               </li>
-              <li className="flex items-center gap-2 text-sm text-[#212100] dark:text-[#c5c69b]">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#212100] dark:bg-[#c5c69b]"></div>
+              <li className="flex items-center gap-2 text-sm text-[#E5E5E5]">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#E5E5E5]"></div>
                 Trending algorithms for high-visibility
               </li>
             </ul>
           </div>
-          <div className="relative overflow-hidden rounded-2xl bg-1 dark:bg-[#212100]/80 p-8 border-2 border-20 dark:border-[#c5c69b]/30 shadow-lg group hover:-translate-y-1 transition-transform duration-300">
-            <h3 className="text-2xl font-bold text-[#212100] dark:text-[#FEFFD2] mb-4">
+          <div className="relative overflow-hidden rounded-2xl bg-[#E5E5E5]/5 backdrop-blur-sm p-8 border border-[#E5E5E5]/10 shadow-lg group hover:-translate-y-1 transition-transform duration-300">
+            <h3 className="text-2xl font-bold text-[#E5E5E5] mb-4">
               Communication Hub
             </h3>
-            <p className="text-[#212100]/80 dark:text-[#c5c69b] mb-6">
+            <p className="text-[#A3A3A3] mb-6">
               Integrated with Resend API to power a robust internal
               communication system, allowing clubs to easily manage their
               audience and automate essential updates.
             </p>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2 text-sm text-[#212100] dark:text-[#c5c69b]">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#212100] dark:bg-[#c5c69b]"></div>
+              <li className="flex items-center gap-2 text-sm text-[#E5E5E5]">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#E5E5E5]"></div>
                 Bulk newsletter dispatching
               </li>
-              <li className="flex items-center gap-2 text-sm text-[#212100] dark:text-[#c5c69b]">
-                <div className="w-1.5 h-1.5 rounded-full bg-[#212100] dark:bg-[#c5c69b]"></div>
+              <li className="flex items-center gap-2 text-sm text-[#E5E5E5]">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#E5E5E5]"></div>
                 Custom email templating for RSVPs
               </li>
             </ul>
@@ -663,37 +636,37 @@ export default function Project1Timeline() {
       title: "Challenges",
       content: (
         <div className="space-y-8">
-          <p className="text-lg text-[#212100]/80 dark:text-[#c5c69b] leading-relaxed max-w-3xl">
+          <p className="text-lg text-[#A3A3A3] leading-relaxed max-w-3xl">
             Building a dual-sided marketplace introduced several architectural
-            hurdles that required careful planning and execution to overcome.
+            hurds that required careful planning and execution to overcome.
           </p>
           <div className="grid grid-cols-1 gap-4">
-            <div className="  dark:bg-[#212100] rounded-xl p-6 border-l-4 border-l-[#212100] dark:border-l-[#c5c69b] border-y border-r border-[#c5c69b]">
-              <h4 className="font-bold text-lg text-[#212100] dark:text-[#FEFFD2] mb-2">
+            <div className="bg-[#E5E5E5]/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-l-[#E5E5E5] border-y border-r border-[#E5E5E5]/10 hover:bg-[#E5E5E5]/10 transition-colors">
+              <h4 className="font-bold text-lg text-[#E5E5E5] mb-2">
                 Handling Multi-Tenancy Data Leaks
               </h4>
-              <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm">
-                Ensuring that a user from &apos Club A &apos could never
-                accidentally query or mutate data belonging to &aposClub B&apos
-                required strict middleware rules and Row-Level Security (RLS)
-                policies within Supabase and Prisma.
+              <p className="text-[#A3A3A3] text-sm">
+                Ensuring that a user from &apos;Club A&apos; could never
+                accidentally query or mutate data belonging to &apos;Club
+                B&apos; required strict middleware rules and Row-Level Security
+                (RLS) policies within Supabase and Prisma.
               </p>
             </div>
-            <div className="bg-[#FEFFD2]/50 dark:bg-[#212100] rounded-xl p-6 border-l-4 border-l-[#212100] dark:border-l-[#c5c69b] border-y border-r border-[#c5c69b]">
-              <h4 className="font-bold text-lg text-[#212100] dark:text-[#FEFFD2] mb-2">
+            <div className="bg-[#E5E5E5]/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-l-[#E5E5E5] border-y border-r border-[#E5E5E5]/10 hover:bg-[#E5E5E5]/10 transition-colors">
+              <h4 className="font-bold text-lg text-[#E5E5E5] mb-2">
                 Complex Database Relationships
               </h4>
-              <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm">
+              <p className="text-[#A3A3A3] text-sm">
                 Designing the Prisma schema to accurately map the many-to-many
                 relationships between Sponsors, Events, and Clubs while
                 maintaining referential integrity and query performance.
               </p>
             </div>
-            <div className="bg-[#FEFFD2]/50 dark:bg-[#212100] rounded-xl p-6 border-l-4 border-l-[#212100] dark:border-l-[#c5c69b] border-y border-r border-[#c5c69b]">
-              <h4 className="font-bold text-lg text-[#212100] dark:text-[#FEFFD2] mb-2">
+            <div className="bg-[#E5E5E5]/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-l-[#E5E5E5] border-y border-r border-[#E5E5E5]/10 hover:bg-[#E5E5E5]/10 transition-colors">
+              <h4 className="font-bold text-lg text-[#E5E5E5] mb-2">
                 State Management in Complex Forms
               </h4>
-              <p className="text-[#212100]/80 dark:text-[#c5c69b] text-sm">
+              <p className="text-[#A3A3A3] text-sm">
                 Managing the UI state for multi-step sponsorship proposals and
                 event creation workflows, ensuring data validation across
                 different components before database submission.
@@ -706,11 +679,11 @@ export default function Project1Timeline() {
     {
       title: "Conclusion",
       content: (
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#212100]/5 to-transparent dark:from-[#212100]/80 dark:to-[#212100]/40 p-8 md:p-12 border-2 border-20 dark:border-[#c5c69b]/30 text-center">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#E5E5E5]/10 to-transparent p-8 md:p-12 border border-[#E5E5E5]/20 text-center backdrop-blur-sm">
           <div className="max-w-2xl mx-auto space-y-6">
-            <div className="w-16 h-16 mx-auto rounded-full bg-[#212100] dark:bg-[#c5c69b] flex items-center justify-center mb-6">
+            <div className="w-16 h-16 mx-auto rounded-full bg-[#E5E5E5]/10 flex items-center justify-center mb-6 border border-[#E5E5E5]/20">
               <svg
-                className="w-8 h-8 text-[#FEFFD2] dark:text-[#212100]"
+                className="w-8 h-8 text-[#E5E5E5]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -723,15 +696,15 @@ export default function Project1Timeline() {
                 ></path>
               </svg>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#212100] dark:text-[#FEFFD2]">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#E5E5E5]">
               Bridging the Gap
             </h2>
-            <p className="text-lg text-[#212100]/80 dark:text-[#c5c69b] leading-relaxed">
+            <p className="text-lg text-[#A3A3A3] leading-relaxed">
               Clubify successfully delivers on its mission to professionalize
               university club management while opening direct monetization
               channels with corporate sponsors.
             </p>
-            <p className="text-md text-[#212100]/70 dark:text-[#c5c69b]/80">
+            <p className="text-md text-[#A3A3A3]/80">
               Building this platform was an incredible journey through modern
               full-stack development, transitioning from basic theory to a
               production-ready architecture equipped to handle real-world scale

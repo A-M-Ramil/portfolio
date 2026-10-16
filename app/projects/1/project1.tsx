@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
 import { Separator } from "@/components/ui/seperator";
-
+import { KineticText } from "@/components/ui/texty";
 import BubbleText from "@/components/ui/textBubble";
 import Project1 from "./project1_details";
 
@@ -25,33 +25,27 @@ const Home = () => {
 
   return (
     <div className="snap-y mx-2 snap-mandatory   no-scrollbar">
-      <section
-        ref={refA}
-        className="h-[29.33vh] md:h-[15vh]  xl:h-[29.33vh] snap-center "
-      >
-        <div className="flex items-end md:justify-center h-[29.33vh] md:h-[15vh] xl:h-[29.33vh]">
-          <h1
-            className="text-[31vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
-        md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] xl:tracking-[-0.9rem] 2xl:tracking-[-1.6rem] lg:leading-[9rem]  xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none  text-black"
+      <section ref={refA} className="h-[29.33vh] snap-center ">
+        <div className="flex items-end md:justify-center  h-[29vh]">
+          <div
+            className=" font-playfair text-[29vw] tracking-[-.6rem]  min-[460px]:text-[27vw] lg:tracking-tighter min-[520px]:text-[23vw] sm:text-[19vw] 
+        md:text-[16.5vw]  lg:text-[11vw]     2xl:text-[14vw] leading-none  text-white"
           >
-            <BubbleText text="Munim Ramil" />
-          </h1>
+            <KineticText text="munim ramil" />
+          </div>
         </div>
         <Separator orientation="horizontal" />
       </section>
 
       <section
         ref={refB}
-        className={`xl:h-[24vh] h-[17vh] pt-2  md:h-[15vh] flex flex-col   ${
-          sticky ? "sticky " : ""
-        }`}
+        className={`h-[24vh] items-end   flex flex-col  ${sticky ? "sticky " : ""}`}
       >
-        {" "}
         <div
-          className="items-end text-[27.5vw] leading-[6.9rem] tracking-[-.6rem] min-[460px]:text-[27vw] min-[520px]:text-[23vw] sm:text-[19vw] 
-      md:text-[16.5vw] md:leading-[8rem] lg:text-[12vw] overflow-y-clip lg:leading-[9rem] md:justify-center  xl:leading-[13rem] 2xl:text-[14vw] min-[1900px]:leading-none flex   text-black  h-[24vh] "
+          className=" font-playfair text-[15vw] min-[460px]:text-[15vw] min-[520px]:text-[15vw] sm:text-[10vw] 
+        md:text-[10vw] lg:tracking-tighter lg:text-[8vw]  md:justify-center   2xl:text-[6vw]  flex items-end  text-white  h-[24vh] "
         >
-          <BubbleText text="Clubify!" />
+          <KineticText text="Clubify!" />
         </div>
         <Separator orientation="horizontal" />
       </section>
